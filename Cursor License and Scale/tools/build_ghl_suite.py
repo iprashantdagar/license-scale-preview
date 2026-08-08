@@ -99,6 +99,51 @@ ROUTES = (
     ("index.html", "/"),
 )
 
+HYBRID_BLOCKS = {
+    "home": [
+        (
+            "press-marquee",
+            "<!-- ══════════════════ PRESS ══════════════════ -->",
+            "<!-- ══════════════════ VERIFIED OUTCOMES ══════════════════ -->",
+            False,
+        ),
+        (
+            "results-carousel",
+            "<!-- ══════════════════ VERIFIED OUTCOMES ══════════════════ -->",
+            "<!-- ══════════════════ COMMUNITY ══════════════════ -->",
+            False,
+        ),
+        (
+            "community-masonry",
+            "<!-- ══════════════════ COMMUNITY ══════════════════ -->",
+            "<!-- ══════════════════ PLAYBOOKS ══════════════════ -->",
+            True,
+        ),
+    ],
+    "apply": [
+        (
+            "community-masonry",
+            '<section class="sec">\n    <span class="glow glow--top"',
+            '<section class="sec">\n    <div class="wrap faq',
+            True,
+        )
+    ],
+    "results": [
+        (
+            "results-carousel",
+            '<section class="sec" id="results">',
+            '<section class="sec">\n    <span class="doodle doodle--side"',
+            False,
+        ),
+        (
+            "community-masonry",
+            '<section class="sec">\n    <span class="doodle doodle--side"',
+            '<section class="survey-sec" id="apply">',
+            True,
+        ),
+    ],
+}
+
 
 def extract_body(source: str) -> str:
     start = source.index('<div id="ls-root">')
@@ -162,6 +207,93 @@ def strip_body_dependencies(fragment: str) -> tuple[str, list[str]]:
     return fragment, dependencies
 
 
+def hybridize_fragment(fragment: str, include_lightbox: bool, body: str) -> str:
+    if include_lightbox:
+        lightbox = re.search(
+            r'<div class="ls-lightbox"[^>]*>.*?<img class="ls-lightbox__img"[^>]*>\s*</div>',
+            body,
+            re.S,
+        )
+        if not lightbox:
+            raise ValueError("Could not find lightbox markup")
+        fragment += "\n" + lightbox.group(0)
+    replacements = {
+        'id="ls-rail"': "data-ls-rail",
+        'id="ls-dots"': "data-ls-dots",
+        'id="ls-prev"': "data-ls-prev",
+        'id="ls-next"': "data-ls-next",
+        'id="ls-lightbox"': "data-ls-lightbox",
+        'id="ls-lightbox-close"': "data-ls-lightbox-close",
+        'id="ls-lightbox-img"': "data-ls-lightbox-image",
+    }
+    for old, new in replacements.items():
+        fragment = fragment.replace(old, new)
+    return '<div class="ls-block">\n' + fragment.strip() + "\n</div>\n"
+
+
+def build_hybrid_blocks(name: str, source: str, css: str, body: str) -> None:
+    specs = HYBRID_BLOCKS.get(name)
+    if not specs:
+        return
+    output = OUTPUT / "hybrid-blocks" / name
+    output.mkdir(parents=True, exist_ok=True)
+    hybrid_css = css.replace("#ls-root", ".ls-block")
+    head = f"""<!-- {name} hybrid blocks: paste once into GHL Header Tracking Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+<style>
+{hybrid_css.strip()}
+</style>
+"""
+    runtime = (ROOT / "tools/ghl-hybrid-runtime.js").read_text()
+    footer = f"""<!-- {name} hybrid blocks: paste once into GHL Footer Tracking Code -->
+<script>window.LS_ASSET_BASE = {json.dumps(ASSET_BASE)};</script>
+<script>
+{runtime.strip()}
+</script>
+"""
+    (output / "01-HYBRID-HEAD.html").write_text(head)
+    (output / "99-HYBRID-SCRIPTS.html").write_text(footer)
+    assembled: list[str] = []
+    for index, (block_name, start_marker, end_marker, lightbox) in enumerate(
+        specs, start=10
+    ):
+        start = body.index(start_marker)
+        end = body.index(end_marker, start)
+        fragment = hybridize_fragment(body[start:end], lightbox, body)
+        filename = f"{index:02d}-{block_name}.html"
+        (output / filename).write_text(
+            f"<!-- Paste into one zero-padding GHL Custom Code element: {block_name} -->\n"
+            + fragment
+        )
+        assembled.append(fragment)
+    (output / "preview.html").write_text(
+        "<!doctype html><html><head><meta charset=\"utf-8\">"
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        + head
+        + "</head><body>"
+        + "\n".join(assembled)
+        + footer
+        + "</body></html>\n"
+    )
+    (output / "README.md").write_text(
+        f"""# {name.replace("-", " ").title()} hybrid Custom Code blocks
+
+Use these only when assembling the advanced native/custom page described in
+`../../NATIVE-ASSEMBLY.md`.
+
+1. Paste `01-HYBRID-HEAD.html` once into Header Tracking Code.
+2. Add each numbered block at the matching point between native GHL sections.
+3. Give every containing GHL row, column, and Custom Code element zero padding.
+4. Paste `99-HYBRID-SCRIPTS.html` once into Footer Tracking Code.
+
+The blocks use `.ls-block` wrappers and data attributes, so several blocks can
+coexist without duplicate `#ls-root` IDs.
+"""
+    )
+
+
 def page_readme(name: str, config: dict[str, object]) -> str:
     section_list = "\n".join(f"- {section}" for section in config["sections"])
     return f"""# {name.replace("-", " ").title()} page
@@ -197,6 +329,7 @@ def build_page(name: str, config: dict[str, object]) -> dict[str, object]:
     body, wistia_dependencies = strip_body_dependencies(extract_body(source))
     body = rewrite_routes(body)
     scripts = extract_scripts(source)
+    build_hybrid_blocks(name, source, css, body)
 
     page_dir = OUTPUT / "pages" / name
     page_dir.mkdir(parents=True, exist_ok=True)
@@ -275,6 +408,9 @@ def main() -> None:
     if pages_dir.exists():
         shutil.rmtree(pages_dir)
     pages_dir.mkdir()
+    hybrid_dir = OUTPUT / "hybrid-blocks"
+    if hybrid_dir.exists():
+        shutil.rmtree(hybrid_dir)
     manifest = {
         "name": "Cursor License and Scale",
         "format": "GoHighLevel hybrid source suite",

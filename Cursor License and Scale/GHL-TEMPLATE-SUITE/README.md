@@ -35,7 +35,9 @@ Custom Code element.
 Use `NATIVE-ASSEMBLY.md` to replace text, buttons, forms, FAQ, cards, and other
 simple areas with native GHL elements. Retain Custom Code only for the results
 carousel, community masonry/lightbox, press marquee, and specialized video
-layouts. This is the path to routine visual editing by a marketing team.
+layouts. Paste-ready isolated versions of those complex sections are in
+`hybrid-blocks/`. This is the path to routine visual editing by a marketing
+team.
 
 GHL does not publish a documented portable file format for native builder
 pages. An actual reusable GHL share link or snapshot must be created inside a

@@ -3,6 +3,10 @@
 This is the account-side build specification. Use the full-fidelity page in a
 second browser tab as the visual reference.
 
+For Home, Apply, and Results, the complex sections marked Custom Code below
+already exist as collision-safe paste files under `hybrid-blocks/<page>/`.
+Each folder includes its own one-time Header and Footer Tracking Code.
+
 ## Global builder settings
 
 - Font: Poppins
@@ -112,6 +116,8 @@ page must not contain a form.
 
 - Keep each interactive custom area in one Custom Code element with its own
   markup and behavior.
+- Use the generated files in `hybrid-blocks/`; do not cut sections out of the
+  full-page `10-BODY.html`.
 - Do not duplicate IDs on the same page.
 - Put shared CSS in Header Tracking Code, not inside multiple elements.
 - Put scripts in Footer Tracking Code so elements exist before initialization.
