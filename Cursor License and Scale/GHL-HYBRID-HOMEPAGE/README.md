@@ -33,8 +33,9 @@ Do not place several of them on one page as-is: they depend on the single
 
 ## Expected GHL-specific follow-up
 
-- Replace `apply.html`, `results.html`, and `career.html` links with the final
-  GHL page URLs.
+- The pilot's cross-page links use the existing GitHub Pages site so they do
+  not break during this one-page test. Replace them with the final GHL page
+  URLs as those pages are built.
 - Replace the Typeform survey with a native GHL form when CRM field mapping and
   the thank-you redirect are ready.
 - Verify desktop, tablet, and mobile on the published URL; the builder canvas
