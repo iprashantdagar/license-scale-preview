@@ -1,0 +1,52 @@
+<!-- LS Careers — Tracking Footer page scripts (after 99) -->
+<script>
+(function(){
+  var map = window.LS_PAGE_URLS || {};
+  var pairs = [
+    ['index.html', map.home],
+    ['results.html', map.results],
+    ['career.html', map.career],
+    ['apply.html', map.apply],
+    ['thank-you.html', map.thankYou]
+  ];
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var href = a.getAttribute('href');
+    if(!href) return;
+    pairs.forEach(function(p){
+      var file = p[0], dest = p[1];
+      if(!dest) return;
+      if(href === file){ a.setAttribute('href', dest); return; }
+      if(href.indexOf(file + '#') === 0){
+        a.setAttribute('href', dest + href.slice(file.length));
+      }
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('ls-root'); if(!root) return;
+  var base=(window.LS_ASSET_BASE||'').replace(/\/$/,'');
+  root.querySelectorAll('.video[data-yt]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(btn.classList.contains('is-playing')) return;
+      var id=btn.getAttribute('data-yt'); if(!id) return;
+      var iframe=document.createElement('iframe');
+      iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      iframe.title=btn.getAttribute('aria-label')||'Video';
+      iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen=true;
+      btn.appendChild(iframe); btn.classList.add('is-playing');
+    });
+  });
+  var lb=root.querySelector('#ls-lightbox'), lbImg=root.querySelector('#ls-lightbox-img'), lbClose=root.querySelector('#ls-lightbox-close');
+  function closeLb(){ if(!lb) return; lb.classList.remove('is-open'); lb.setAttribute('aria-hidden','true'); if(lbImg) lbImg.removeAttribute('src'); document.documentElement.style.overflow=''; }
+  function openLb(src){ if(!lb||!lbImg||!src) return; if(base && src.indexOf('assets/')===0) src=base+'/'+src.slice(7); lbImg.src=src; lb.classList.add('is-open'); lb.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; }
+  root.querySelectorAll('.shot[data-zoom]').forEach(function(btn){ btn.addEventListener('click',function(){ openLb(btn.getAttribute('data-zoom')); }); });
+  if(lbClose) lbClose.addEventListener('click', closeLb);
+  if(lb) lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/gh/iprashantdagar/license-scale-preview@main/js/ls-common.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/iprashantdagar/license-scale-preview@main/js/ls-enhance.js"></script>

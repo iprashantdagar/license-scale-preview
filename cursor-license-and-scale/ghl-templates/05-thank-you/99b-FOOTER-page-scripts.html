@@ -1,0 +1,27 @@
+<!-- LS Thank You — Tracking Footer page scripts (after 99) -->
+<script>
+(function(){
+  var map = window.LS_PAGE_URLS || {};
+  var pairs = [
+    ['index.html', map.home],
+    ['results.html', map.results],
+    ['career.html', map.career],
+    ['apply.html', map.apply],
+    ['thank-you.html', map.thankYou]
+  ];
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var href = a.getAttribute('href');
+    if(!href) return;
+    pairs.forEach(function(p){
+      var file = p[0], dest = p[1];
+      if(!dest) return;
+      if(href === file){ a.setAttribute('href', dest); return; }
+      if(href.indexOf(file + '#') === 0){
+        a.setAttribute('href', dest + href.slice(file.length));
+      }
+    });
+  });
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/gh/iprashantdagar/license-scale-preview@main/js/ls-common.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/iprashantdagar/license-scale-preview@main/js/ls-enhance.js"></script>

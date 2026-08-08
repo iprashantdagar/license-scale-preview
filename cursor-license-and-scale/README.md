@@ -1,26 +1,20 @@
 # Cursor License and Scale
 
-Working copy of the License & Scale static site for **Go High Level hybrid conversion**.
+Working copy for **Go High Level templates**. Original root preview is untouched.
 
-The original preview at the repo root (`/index.html`, GitHub Pages home) is **untouched**. Do all GHL experiments here.
+## GHL templates (start here)
 
-## Preview URLs (after this branch is on GitHub Pages / merged)
+**[`ghl-templates/README.md`](./ghl-templates/README.md)**  
+**[`ghl-templates/ADVANCED-PATH.md`](./ghl-templates/ADVANCED-PATH.md)**  
+Zip: [`ghl-templates.zip`](./ghl-templates.zip)
 
-| Page | Path |
+| GHL page | Folder |
 |---|---|
-| Hub | `/cursor-license-and-scale/preview.html` |
-| Landing | `/cursor-license-and-scale/index.html` |
-| Careers | `/cursor-license-and-scale/career.html` |
-| Results | `/cursor-license-and-scale/results.html` |
-| Apply | `/cursor-license-and-scale/apply.html` |
-| Thank You | `/cursor-license-and-scale/thank-you.html` |
+| LS Landing | `ghl-templates/01-landing/` |
+| LS Careers | `ghl-templates/02-careers/` |
+| LS Results | `ghl-templates/03-results/` |
+| LS Apply | `ghl-templates/04-apply/` |
+| LS Thank You | `ghl-templates/05-thank-you/` |
 
-Assets are shared from the parent `../assets/` folder (original CDN / GitHub Pages assets).
-
-## GHL hybrid homepage pilot
-
-Start here:
-
-**[`ghl-hybrid-homepage/README.md`](./ghl-hybrid-homepage/README.md)**
-
-That kit is the one-page import for **LS Home Hybrid Pilot** (full-body Custom Code + tracking). Import it, preview in GHL, then send feedback on spacing / nav / videos / mobile before we native-ize sections.
+## Static preview (this folder)
+Hub: `preview.html` — assets via `../assets/`.

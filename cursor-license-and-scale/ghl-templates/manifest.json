@@ -1,0 +1,87 @@
+[
+  {
+    "id": "01-landing",
+    "ghl_name": "LS Landing",
+    "source": "index.html",
+    "sections": [
+      "HERO",
+      "CASE STUDIES",
+      "TESTIMONIAL + PROCESS",
+      "PRESS",
+      "VERIFIED OUTCOMES",
+      "COMMUNITY",
+      "PLAYBOOKS",
+      "CAREERS",
+      "FAQ",
+      "SURVEY",
+      "FOOTER"
+    ],
+    "body_bytes": 49289,
+    "head_bytes": 36245,
+    "inline_scripts": 1
+  },
+  {
+    "id": "02-careers",
+    "ghl_name": "LS Careers",
+    "source": "career.html",
+    "sections": [
+      "PAGE HERO",
+      "SEC",
+      "SEC",
+      "OPENINGS",
+      "FOOTER"
+    ],
+    "body_bytes": 17240,
+    "head_bytes": 5418,
+    "inline_scripts": 1
+  },
+  {
+    "id": "03-results",
+    "ghl_name": "LS Results",
+    "source": "results.html",
+    "sections": [
+      "PAGE HERO",
+      "SEC",
+      "RESULTS",
+      "SEC",
+      "SURVEY / CTA",
+      "FOOTER",
+      "LIGHTBOX"
+    ],
+    "body_bytes": 14872,
+    "head_bytes": 5889,
+    "inline_scripts": 1
+  },
+  {
+    "id": "04-apply",
+    "ghl_name": "LS Apply",
+    "source": "apply.html",
+    "sections": [
+      "NAV",
+      "APPLY HERO",
+      "SEC",
+      "SEC",
+      "FOOTER",
+      "LIGHTBOX"
+    ],
+    "body_bytes": 16261,
+    "head_bytes": 1321,
+    "inline_scripts": 1
+  },
+  {
+    "id": "05-thank-you",
+    "ghl_name": "LS Thank You",
+    "source": "thank-you.html",
+    "sections": [
+      "NAV",
+      "THANK YOU HERO",
+      "SEC",
+      "SEC",
+      "PLAYBOOKS",
+      "FOOTER"
+    ],
+    "body_bytes": 14976,
+    "head_bytes": 1325,
+    "inline_scripts": 0
+  }
+]
