@@ -1,0 +1,141 @@
+{
+  "name": "Cursor License and Scale",
+  "format": "GoHighLevel hybrid source suite",
+  "sourceCommit": "2b475f9433a3d76f33e6737417515c01ab00039c",
+  "assetBase": "https://cdn.jsdelivr.net/gh/iprashantdagar/license-scale-preview@2b475f9433a3d76f33e6737417515c01ab00039c/assets",
+  "pages": [
+    {
+      "name": "home",
+      "source": "index.html",
+      "slug": "/",
+      "title": "License & Scale \u2014 Start an AI agency. Scale it to seven figures.",
+      "sections": [
+        "Hero and navigation",
+        "Case studies",
+        "Testimonial and process",
+        "Press marquee",
+        "Verified outcomes",
+        "Community masonry",
+        "Playbooks",
+        "Careers",
+        "FAQ",
+        "Survey",
+        "Footer"
+      ],
+      "files": {
+        "header": "pages/home/01-HEAD.html",
+        "body": "pages/home/10-BODY.html",
+        "dependencies": "pages/home/98-DEPENDENCIES.html",
+        "scripts": "pages/home/99-SCRIPTS.html"
+      },
+      "integrations": {
+        "typeform": true,
+        "wistia": true,
+        "youtube": true,
+        "staticFormFallback": false
+      }
+    },
+    {
+      "name": "apply",
+      "source": "apply.html",
+      "slug": "/apply",
+      "title": "Apply \u2014 License & Scale",
+      "sections": [
+        "Navigation",
+        "Application introduction and form",
+        "Community masonry",
+        "FAQ",
+        "Footer"
+      ],
+      "files": {
+        "header": "pages/apply/01-HEAD.html",
+        "body": "pages/apply/10-BODY.html",
+        "dependencies": "pages/apply/98-DEPENDENCIES.html",
+        "scripts": "pages/apply/99-SCRIPTS.html"
+      },
+      "integrations": {
+        "typeform": false,
+        "wistia": false,
+        "youtube": false,
+        "staticFormFallback": true
+      }
+    },
+    {
+      "name": "results",
+      "source": "results.html",
+      "slug": "/results",
+      "title": "Results \u2014 License & Scale",
+      "sections": [
+        "Results hero and navigation",
+        "Headline statistics",
+        "Results carousel",
+        "Community masonry",
+        "Apply call to action",
+        "Footer"
+      ],
+      "files": {
+        "header": "pages/results/01-HEAD.html",
+        "body": "pages/results/10-BODY.html",
+        "dependencies": "pages/results/98-DEPENDENCIES.html",
+        "scripts": "pages/results/99-SCRIPTS.html"
+      },
+      "integrations": {
+        "typeform": false,
+        "wistia": false,
+        "youtube": true,
+        "staticFormFallback": false
+      }
+    },
+    {
+      "name": "careers",
+      "source": "career.html",
+      "slug": "/careers",
+      "title": "Careers \u2014 License & Scale",
+      "sections": [
+        "Careers hero and navigation",
+        "Company introduction",
+        "Team values",
+        "Open roles",
+        "Footer"
+      ],
+      "files": {
+        "header": "pages/careers/01-HEAD.html",
+        "body": "pages/careers/10-BODY.html",
+        "dependencies": "pages/careers/98-DEPENDENCIES.html",
+        "scripts": "pages/careers/99-SCRIPTS.html"
+      },
+      "integrations": {
+        "typeform": false,
+        "wistia": true,
+        "youtube": false,
+        "staticFormFallback": false
+      }
+    },
+    {
+      "name": "thank-you",
+      "source": "thank-you.html",
+      "slug": "/thank-you",
+      "title": "Thank You \u2014 License & Scale",
+      "sections": [
+        "Navigation",
+        "Application timeline",
+        "Featured case studies",
+        "Verified case-study grid",
+        "Playbooks",
+        "Footer"
+      ],
+      "files": {
+        "header": "pages/thank-you/01-HEAD.html",
+        "body": "pages/thank-you/10-BODY.html",
+        "dependencies": "pages/thank-you/98-DEPENDENCIES.html",
+        "scripts": "pages/thank-you/99-SCRIPTS.html"
+      },
+      "integrations": {
+        "typeform": false,
+        "wistia": false,
+        "youtube": true,
+        "staticFormFallback": false
+      }
+    }
+  ]
+}

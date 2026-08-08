@@ -1,0 +1,307 @@
+<!-- results page: paste last in GHL Footer Tracking Code -->
+<script>
+/* Bundled from js/ls-common.js */
+(function(){
+  var root = document.getElementById('ls-root');
+  if(!root) return;
+  var base = (window.LS_ASSET_BASE || '').replace(/\/$/,'');
+  root.querySelectorAll('[data-bg]').forEach(function(el){
+    var src = el.getAttribute('data-bg');
+    if(!src) return;
+    if(base && src.indexOf('assets/') === 0) src = base + '/' + src.slice(7);
+    /* absolute: url() inside a custom property resolves against the stylesheet, not the page */
+    try { src = new URL(src, document.baseURI).href; } catch(e){}
+    el.style.setProperty('--img', 'url("' + src + '")');
+    el.classList.add('is-set');
+  });
+  root.querySelectorAll('img[src^="assets/"]').forEach(function(img){
+    if(base) img.setAttribute('src', base + '/' + img.getAttribute('src').slice(7));
+  });
+  var burger = root.querySelector('#ls-burger'), menu = root.querySelector('#ls-menu');
+  if(burger && menu){
+    burger.addEventListener('click', function(){
+      var open = menu.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    menu.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ menu.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); }
+    });
+  }
+  root.querySelectorAll('#ls-acc .acc__btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement, open = item.classList.contains('is-open');
+      root.querySelectorAll('#ls-acc .acc__item').forEach(function(i){
+        i.classList.remove('is-open');
+        var b = i.querySelector('.acc__btn');
+        if(b) b.setAttribute('aria-expanded','false');
+      });
+      if(!open){ item.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+  var items = root.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:.08 });
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  /* ── inline YouTube play (same-tab) ── */
+  function lsPlayYt(btn){
+    if(!btn || btn.classList.contains('is-playing')) return;
+    var id = btn.getAttribute('data-yt');
+    if(!id) return;
+    var start = btn.getAttribute('data-yt-start');
+    var src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+    if(start) src += '&start=' + encodeURIComponent(start);
+    var iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = btn.getAttribute('aria-label') || 'Video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    btn.appendChild(iframe);
+    btn.classList.add('is-playing');
+  }
+  root.querySelectorAll('.video[data-yt]').forEach(function(btn){
+    btn.addEventListener('click', function(){ lsPlayYt(btn); });
+  });
+  root.querySelectorAll('[data-yt-play]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var id = el.getAttribute('data-yt-play');
+      if(!id) return;
+      var btn = root.querySelector('.video[data-yt="' + id + '"]');
+      if(btn){ lsPlayYt(btn); btn.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+    });
+  });
+})();
+
+
+/* Bundled from js/ls-enhance.js */
+/* License & Scale — UI enhancements
+   1) Casino / odometer roll for the headline stats (once per page load, on enter).
+   2) Mobile navigation bar that follows the user on every page.
+   Values, labels and markup content are never altered: the reels are built from
+   the existing text and the exact original text is restored when they settle. */
+(function () {
+  var root = document.getElementById('ls-root');
+  if (!root) return;
+
+  var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+  /* ─────────────── 1. odometer stats ─────────────── */
+  function initOdometer() {
+    if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+    var groups = root.querySelectorAll('.stats, .statbar');
+    if (!groups.length) return;
+
+    var SPIN_BASE = 1100;   /* ms for the first digit  */
+    var SPIN_STEP = 280;    /* extra ms per digit to the right */
+    var EASE = 'cubic-bezier(.12,.74,.18,1)';
+
+    function reelFor(digit, cycles, cellH) {
+      var target = parseInt(digit, 10);
+      if (isNaN(target)) target = 0;
+
+      var reel = document.createElement('span');
+      reel.className = 'ls-odo__r';
+
+      /* Full spin cycles of 0-9, then one last 0..target sequence so the
+         final frame is EXACTLY the displayed digit (no off-by-one). */
+      var cells = [];
+      var c, d;
+      for (c = 0; c < cycles; c++) {
+        for (d = 0; d < 10; d++) cells.push(d);
+      }
+      for (d = 0; d <= target; d++) cells.push(d);
+
+      cells.forEach(function (n) {
+        var i = document.createElement('i');
+        i.textContent = String(n);
+        i.style.height = cellH + 'px';
+        i.style.lineHeight = cellH + 'px';
+        reel.appendChild(i);
+      });
+
+      return { el: reel, stopIndex: cells.length - 1 };
+    }
+
+    function measureCellHeight(b) {
+      var probe = document.createElement('span');
+      probe.style.cssText = 'display:inline-block;visibility:hidden;line-height:1;font:inherit;';
+      probe.textContent = '8';
+      b.appendChild(probe);
+      var h = Math.round(probe.getBoundingClientRect().height) || Math.round(parseFloat(getComputedStyle(b).fontSize)) || 36;
+      b.removeChild(probe);
+      return Math.max(h, 1);
+    }
+
+    function build(b) {
+      var text = b.textContent.trim();
+      if (!text || !/\d/.test(text)) return null;
+
+      var cellH = measureCellHeight(b);
+
+      var odo = document.createElement('span');
+      odo.className = 'ls-odo';
+      odo.setAttribute('aria-hidden', 'true');
+
+      var reels = [];
+      (text.match(/(\d+|\D+)/g) || []).forEach(function (part) {
+        if (/^\d+$/.test(part)) {
+          part.split('').forEach(function (ch) {
+            /* More cycles for later digits so tens/ones visibly roll longer,
+               but final stop is always the real digit. */
+            var made = reelFor(ch, 2 + reels.length, cellH);
+            var cell = document.createElement('span');
+            cell.className = 'ls-odo__d';
+            cell.style.height = cellH + 'px';
+            cell.appendChild(made.el);
+            odo.appendChild(cell);
+            reels.push(made);
+          });
+        } else {
+          var s = document.createElement('span');
+          s.className = 'ls-odo__s';
+          s.textContent = part;
+          odo.appendChild(s);
+        }
+      });
+      if (!reels.length) return null;
+
+      var sr = document.createElement('span');
+      sr.className = 'ls-odo-sr';
+      sr.textContent = text;
+
+      b.textContent = '';
+      b.appendChild(odo);
+      b.appendChild(sr);
+      return { node: b, text: text, reels: reels, cellH: cellH };
+    }
+
+    function spin(item) {
+      var longest = 0;
+      item.reels.forEach(function (r, i) {
+        var dur = SPIN_BASE + i * SPIN_STEP;
+        longest = Math.max(longest, dur);
+        r.el.style.transition = 'transform ' + dur + 'ms ' + EASE;
+        /* stopIndex is the last cell (= target digit). Exact px height avoids
+           fractional line-height drift that was landing 89/71 on wrong digits. */
+        r.el.style.transform = 'translate3d(0,' + (-r.stopIndex * item.cellH) + 'px,0)';
+      });
+      /* restore original text once settled (byte-identical markup) */
+      setTimeout(function () { item.node.textContent = item.text; }, longest + 80);
+    }
+
+    function start() {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          io.unobserve(en.target);
+          var items = [];
+          en.target.querySelectorAll('b').forEach(function (b) {
+            var made = build(b);
+            if (made) items.push(made);
+          });
+          if (!items.length) return;
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () { items.forEach(spin); });
+          });
+        });
+      }, { threshold: 0.3 });
+      groups.forEach(function (g) { io.observe(g); });
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(start).catch(start);
+    } else {
+      start();
+    }
+  }
+
+  /* ─────────────── 2. mobile nav that follows the scroll ─────────────── */
+  function initStickyNav() {
+    var nav = root.querySelector('.nav');
+    if (!nav) return;
+
+    var spacer = document.createElement('div');
+    spacer.className = 'ls-nav-spacer';
+    spacer.setAttribute('aria-hidden', 'true');
+    spacer.style.height = '0px';
+    nav.parentNode.insertBefore(spacer, nav.nextSibling);
+
+    function sync() {
+      var fixed = window.getComputedStyle(nav).position === 'fixed';
+      var h = fixed ? Math.round(nav.getBoundingClientRect().height) : 0;
+      spacer.style.height = h + 'px';
+      document.documentElement.style.setProperty('--ls-navh', (h || 72) + 'px');
+      root.style.setProperty('--ls-navh', (h || 72) + 'px');
+    }
+
+    sync();
+    window.addEventListener('resize', sync);
+    window.addEventListener('orientationchange', sync);
+    if (window.ResizeObserver) new ResizeObserver(sync).observe(nav);
+  }
+
+  initStickyNav();
+  initOdometer();
+})();
+
+
+/* Page-specific source behavior */
+(function(){
+  var root=document.getElementById('ls-root'); if(!root) return;
+  var base=(window.LS_ASSET_BASE||'').replace(/\/$/,'');
+  root.querySelectorAll('.video[data-yt]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(btn.classList.contains('is-playing')) return;
+      var id=btn.getAttribute('data-yt'); if(!id) return;
+      var iframe=document.createElement('iframe');
+      iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      iframe.title=btn.getAttribute('aria-label')||'Video';
+      iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen=true;
+      btn.appendChild(iframe); btn.classList.add('is-playing');
+    });
+  });
+  /* results carousel — same behaviour as the homepage rail */
+  var rail=root.querySelector('#ls-rail');
+  if(rail){
+    var slides=rail.querySelectorAll('.result'),
+        dots=root.querySelectorAll('#ls-dots button'),
+        prev=root.querySelector('#ls-prev'),
+        next=root.querySelector('#ls-next');
+    function step(){ return slides.length>1 ? slides[1].offsetLeft-slides[0].offsetLeft : rail.clientWidth; }
+    function index(){ return Math.round(rail.scrollLeft/step()); }
+    function goTo(i){ rail.scrollTo({ left: Math.max(0, Math.min(i, slides.length-1))*step(), behavior:'smooth' }); }
+    if(prev) prev.addEventListener('click', function(){ goTo(index()-1); });
+    if(next) next.addEventListener('click', function(){ goTo(index()+1); });
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); });
+    rail.addEventListener('keydown', function(e){
+      if(e.key==='ArrowRight'){ e.preventDefault(); goTo(index()+1); }
+      if(e.key==='ArrowLeft'){ e.preventDefault(); goTo(index()-1); }
+    });
+    rail.addEventListener('scroll', function(){
+      var i=index(), max=slides.length-1;
+      dots.forEach(function(d,n){ if(n===i) d.setAttribute('aria-current','true'); else d.removeAttribute('aria-current'); });
+      if(prev) prev.classList.toggle('is-on', i>0);
+      if(next) next.classList.toggle('is-on', i<max);
+    }, { passive:true });
+  }
+  var lb=root.querySelector('#ls-lightbox'), lbImg=root.querySelector('#ls-lightbox-img'), lbClose=root.querySelector('#ls-lightbox-close');
+  function closeLb(){ if(!lb) return; lb.classList.remove('is-open'); lb.setAttribute('aria-hidden','true'); if(lbImg) lbImg.removeAttribute('src'); document.documentElement.style.overflow=''; }
+  function openLb(src){ if(!lb||!lbImg||!src) return; if(base && src.indexOf('assets/')===0) src=base+'/'+src.slice(7); lbImg.src=src; lb.classList.add('is-open'); lb.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; }
+  root.querySelectorAll('.shot[data-zoom]').forEach(function(btn){ btn.addEventListener('click',function(){ openLb(btn.getAttribute('data-zoom')); }); });
+  if(lbClose) lbClose.addEventListener('click', closeLb);
+  if(lb) lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
+})();
+</script>
