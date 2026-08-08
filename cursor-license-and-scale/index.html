@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Cursor License &amp; Scale — Start an AI agency. Scale it to seven figures.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+<script src="https://embed.typeform.com/next/embed.js" async></script>
+<script>window.LS_ASSET_BASE = '../assets';</script>
+<style>
+
+/* ═══════════════════════ TOKENS ═══════════════════════ */
+#ls-root{
+  --ink:#0B0A12;
+  --text:#F7EEFF;
+  --muted:#AAA5AD;
+  --line:#1D1D23;
+  --line-2:#1B1A23;
+  --purple:#A610DF;
+  --purple-lt:#AC58EB;
+  --gold:#F7D277;
+  --blue:#77BDF7;
+  --green:#00B77B;
+  --page:1200px;
+  --gut:20px;
+
+  font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--ink);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  /* full-bleed breakout inside GHL rows */
+  position:relative;
+  width:100vw;
+  max-width:100vw;
+  left:50%;right:50%;
+  margin-left:-50vw;margin-right:-50vw;
+  overflow-x:clip;
+}
+#ls-root *,#ls-root *::before,#ls-root *::after{margin:0;padding:0;box-sizing:border-box}
+#ls-root img{display:block;max-width:100%}
+#ls-root a{color:inherit;text-decoration:none}
+#ls-root button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#ls-root ul,#ls-root li{list-style:none}
+#ls-root :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+#ls-root .ls-fill{width:100%;height:100%;object-fit:cover}
+#ls-root .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ═══════════════════════ LAYOUT ═══════════════════════ */
+#ls-root .wrap{width:100%;max-width:var(--page);margin:0 auto;padding:0 var(--gut)}
+#ls-root .sec{position:relative;padding:80px 8px;isolation:isolate}
+#ls-root .sec--tight{padding:40px 8px}
+#ls-root .glow{
+  position:absolute;left:50%;transform:translateX(-50%);
+  width:min(1200px,100%);height:127px;background:var(--purple);
+  opacity:.3;filter:blur(120px);pointer-events:none;z-index:-1;
+}
+#ls-root .glow--strong{opacity:.55}
+#ls-root .glow--top{top:96px}
+#ls-root .glow--btm{bottom:0}
+
+/* ═══════════════════════ TYPE ═══════════════════════ */
+#ls-root .eyebrow{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:500;line-height:18px;text-transform:uppercase;letter-spacing:.01em;
+}
+#ls-root .eyebrow::before{content:"";width:4.72px;height:4.72px;background:var(--purple);flex:none}
+#ls-root .eyebrow--c{justify-content:center}
+#ls-root .h2{font-size:clamp(30px,4.4vw,48px);font-weight:700;line-height:.9;letter-spacing:-.02em}
+#ls-root .head{display:flex;flex-direction:column;gap:24px}
+#ls-root .head--c{align-items:center;text-align:center}
+
+/* ═══════════════════════ BUTTONS ═══════════════════════ */
+#ls-root .btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  padding:14px 22px 14px 20px;border-radius:8px;border:1px solid transparent;
+  font-size:18px;font-weight:700;line-height:1;
+  transition:transform .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+#ls-root .btn svg{flex:none;transition:transform .18s ease}
+#ls-root .btn:hover{transform:translateY(-2px)}
+#ls-root .btn:hover svg{transform:translate(2px,-2px)}
+#ls-root .btn:active{transform:translateY(0)}
+#ls-root .btn--light{background:var(--text);color:var(--ink)}
+#ls-root .btn--light:hover{box-shadow:0 12px 30px -10px rgba(247,238,255,.45)}
+#ls-root .btn--ghost{background:rgba(247,238,255,.07)}
+#ls-root .btn--ghost:hover{background:rgba(247,238,255,.15)}
+#ls-root .btn--outline{border-color:var(--line)}
+#ls-root .btn--outline:hover{border-color:var(--purple-lt);background:rgba(172,88,235,.08)}
+#ls-root .btn--sm{font-size:16px;height:44px}
+#ls-root .btn--wide{width:100%}
+
+/* ═══════════════════════ PLACEHOLDERS ═══════════════════════ */
+#ls-root .ph{
+  position:relative;width:100%;height:100%;border-radius:inherit;overflow:hidden;
+  background-color:#141320;background-size:cover;background-position:center;
+  background-image:
+    linear-gradient(135deg,rgba(166,16,223,.18),rgba(166,16,223,0) 55%),
+    repeating-linear-gradient(45deg,rgba(247,238,255,.035) 0 10px,transparent 10px 20px);
+  border:1px dashed rgba(247,238,255,.14);
+  display:flex;align-items:center;justify-content:center;
+}
+#ls-root .ph::after{
+  content:attr(data-ph);font-size:10px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(247,238,255,.4);padding:6px 8px;text-align:center;
+}
+#ls-root .ph.is-set{border-style:solid;border-color:var(--line);background-image:var(--img)}
+#ls-root .ph.is-set::after{content:""}
+
+/* ═══════════════════════ TRUSTPILOT ═══════════════════════ */
+#ls-root .trust{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#ls-root .trust b,#ls-root .trust span.v{font-size:14px;font-weight:700;letter-spacing:-.03em;line-height:120%}
+#ls-root .trust .tp{display:flex;align-items:center;gap:5px}
+#ls-root .stars{display:flex;align-items:center;gap:1.54px}
+#ls-root .stars i{width:15.8px;height:16px;background:var(--green);display:flex;align-items:center;justify-content:center}
+#ls-root .trust .dot{width:4px;height:4px;background:var(--text);flex:none}
+#ls-root .trust--bar{
+  width:100%;max-width:910px;justify-content:center;gap:24px;padding:24px;
+  background:rgba(172,88,235,.1);border-radius:8px;
+}
+#ls-root .trust--bar b,#ls-root .trust--bar span.v{font-size:clamp(15px,2vw,20.6px)}
+#ls-root .trust--bar .stars i{width:23.24px;height:23.53px}
+#ls-root .trust--bar .stars{gap:2.27px}
+#ls-root .trust--bar .tp{gap:7.4px}
+#ls-root .trust--bar .dot{width:5.88px;height:5.88px}
+
+/* ═══════════════════════ NAV ═══════════════════════ */
+#ls-root .nav{position:relative;z-index:30;padding:24px 100px}
+#ls-root .nav__in{max-width:var(--page);margin:0 auto;height:44px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+#ls-root .logo{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+#ls-root .logo__mark{width:15px;height:21px;background:var(--text);clip-path:polygon(50% 0,100% 36%,76% 100%,24% 100%,0 36%);flex:none}
+#ls-root .logo img,#ls-root .footer__logo img{display:block;height:28px;width:auto;max-width:min(220px,52vw)}
+#ls-root .footer__logo img{height:36px;max-width:min(280px,70vw)}
+#ls-root a.logo{font-size:0;letter-spacing:0;gap:0}
+#ls-root .footer__logo{font-size:0;letter-spacing:0;gap:0}
+#ls-root .menu{display:flex;align-items:center;gap:32px}
+#ls-root .menu a{font-size:14px;font-weight:700;line-height:21px;text-transform:uppercase;transition:color .18s ease,opacity .18s ease}
+#ls-root .menu a:first-child{font-size:16px;line-height:24px}
+#ls-root .menu a:hover{color:var(--gold)}
+#ls-root .burger{display:none;width:44px;height:44px;border-radius:8px;background:rgba(247,238,255,.07);align-items:center;justify-content:center}
+#ls-root .burger i{position:relative;display:block;width:18px;height:2px;background:var(--text)}
+#ls-root .burger i::before,#ls-root .burger i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--text)}
+#ls-root .burger i::before{top:-6px}
+#ls-root .burger i::after{top:6px}
+
+/* ═══════════════════════ HERO ═══════════════════════ */
+#ls-root .hero{position:relative;overflow:hidden}
+#ls-root .hero__bg{
+  position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;
+  background-color:#171326;background-image:var(--img,none);
+}
+#ls-root .hero__veil{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(11,10,18,.35) 0%,rgba(11,10,18,0) 59.25%,#0B0A12 100%);
+}
+#ls-root .hero__body{padding:64px 0}
+#ls-root .hero__grid{display:flex;align-items:center;justify-content:space-between;gap:48px}
+#ls-root .hero__col{width:576px;max-width:100%;display:flex;flex-direction:column;gap:32px}
+#ls-root .hero__copy{display:flex;flex-direction:column;align-items:flex-start;gap:24px;position:relative}
+#ls-root .hero__h1{
+  position:relative;font-size:clamp(34px,3.9vw,56px);font-style:italic;font-weight:700;
+  line-height:.9;letter-spacing:-.02em;color:var(--gold);
+}
+#ls-root .mark{position:relative;display:inline-block;padding:0 10px;z-index:1}
+#ls-root .mark::before{
+  content:"";position:absolute;left:0;right:0;top:.02em;bottom:.06em;
+  background:var(--purple);z-index:-1;
+}
+#ls-root .rocket{display:inline-block;width:.78em;height:.78em;vertical-align:-.1em;margin-left:-.06em;position:relative;z-index:2}
+#ls-root .rocket svg{width:100%;height:100%}
+#ls-root .hero__sub{max-width:423px;font-size:16px;font-weight:500;line-height:140%}
+#ls-root .stats{display:flex;align-items:stretch;gap:clamp(16px,2vw,28px);flex-wrap:wrap}
+#ls-root .stat{display:flex;flex-direction:column;gap:12px;min-width:0}
+#ls-root .stat b{font-size:clamp(28px,3.1vw,40px);font-weight:700;line-height:90%;letter-spacing:-.02em}
+#ls-root .stat span{font-size:14px;font-weight:400;line-height:140%;white-space:nowrap}
+#ls-root .stat-div{width:1px;background:var(--text);opacity:.55;align-self:stretch}
+
+/* VSL card */
+#ls-root .vsl{
+  width:535px;max-width:100%;flex:none;position:relative;overflow:hidden;
+  border:2px solid var(--text);border-radius:12px;background:#0f0e18;
+  box-shadow:0 0 52px rgba(255,255,255,.25);
+}
+#ls-root .vsl__bar{height:40px;background:var(--purple-lt);display:flex;align-items:center;justify-content:center;gap:11px;padding:0 12px}
+#ls-root .vsl__bar b{font-size:clamp(13px,1.4vw,16px);font-weight:700;line-height:140%}
+#ls-root .vsl__frame{position:relative;aspect-ratio:535/279;background:#141320}
+#ls-root .vsl__frame iframe,#ls-root .vsl__frame video{position:absolute;inset:0;width:100%;height:100%;border:0}
+#ls-root .vsl__strip{display:none}
+#ls-root .play{
+  position:absolute;left:50%;top:50%;translate:-50% -50%;
+  width:77px;height:43px;border-radius:4px;background:var(--purple-lt);
+  display:flex;align-items:center;justify-content:center;z-index:3;
+  transition:background-color .2s ease;
+}
+#ls-root .play--round{width:40px;height:40px;border-radius:1000px}
+#ls-root .video:hover .play,#ls-root .vsl:hover .play{background:var(--purple)}
+
+/* ═══════════════════════ CASE STUDIES ═══════════════════════ */
+#ls-root .cases{display:flex;flex-direction:column;align-items:center;gap:40px;margin-top:48px}
+#ls-root .video{
+  position:relative;display:block;overflow:hidden;background:#141320;
+  border:1px solid var(--line);border-radius:16px;cursor:pointer;padding:0;width:100%;color:inherit;
+}
+#ls-root .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#ls-root .video.is-playing .ph,#ls-root .video.is-playing .play{opacity:0;pointer-events:none}
+#ls-root .case{
+  width:100%;max-width:910px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:48px;align-items:center;
+}
+#ls-root .case .video{aspect-ratio:431/266}
+#ls-root .case__copy{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+#ls-root .case__title-btn{display:block;width:100%;text-align:left}
+#ls-root .case__title a{color:inherit;text-decoration:none}
+#ls-root .case__title a:hover{color:var(--gold)}
+#ls-root .tag{
+  display:inline-flex;align-items:center;height:19px;padding:0 4px;background:var(--purple);
+  font-size:16px;font-weight:700;line-height:120%;letter-spacing:-.03em;
+}
+#ls-root .case__title{font-size:clamp(20px,2.3vw,28px);font-weight:700;line-height:120%;letter-spacing:-.03em}
+#ls-root .grid2{width:100%;max-width:910px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#ls-root .grid2 .video{aspect-ratio:443/266}
+
+/* ═══════════════════════ TESTIMONIAL + PROCESS ═══════════════════════ */
+#ls-root .quote{
+  display:grid;grid-template-columns:243px minmax(0,606px);gap:48px;
+  justify-content:space-between;padding:48px 64px;
+}
+#ls-root .quote__who{display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+#ls-root .avatar{width:81px;height:81px;border-radius:5.06px;overflow:hidden;border:1.27px solid var(--line);flex:none}
+#ls-root .who__name{font-size:12px;font-weight:500;line-height:18px;text-transform:uppercase;margin-top:16px}
+#ls-root .who__role{font-size:12px;font-weight:500;line-height:18px;text-transform:uppercase;color:var(--muted)}
+#ls-root .press{font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1}
+#ls-root .quote__body{display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+#ls-root .quote__text{font-size:clamp(18px,2vw,24px);font-weight:700;line-height:140%;letter-spacing:-.05em}
+#ls-root .steps-wrap{display:flex;flex-direction:column;gap:48px;margin-top:64px}
+#ls-root .steps-title{font-size:clamp(24px,2.6vw,32px);font-weight:700;line-height:90%;letter-spacing:-.02em;text-align:center}
+#ls-root .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#ls-root .step{display:flex;flex-direction:column;gap:16px;padding:0 clamp(0px,1.6vw,24px)}
+#ls-root .step+.step{border-left:1px solid var(--line)}
+#ls-root .step__hd{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;line-height:27px}
+#ls-root .step p{font-size:14px;font-weight:400;line-height:140%;color:var(--muted)}
+
+/* ═══════════════════════ PRESS MARQUEE ═══════════════════════ */
+#ls-root .press-hd{font-size:16px;font-weight:600;line-height:140%;text-align:center}
+#ls-root .marquee{position:relative;margin-top:48px;overflow:hidden;height:31px}
+#ls-root .marquee::before,#ls-root .marquee::after{
+  content:"";position:absolute;top:0;width:86px;height:100%;z-index:2;pointer-events:none;
+}
+#ls-root .marquee::before{left:0;background:linear-gradient(90deg,#0B0A12,rgba(11,10,18,0))}
+#ls-root .marquee::after{right:0;background:linear-gradient(270deg,#0B0A12,rgba(11,10,18,0))}
+#ls-root .marquee__track{display:flex;align-items:center;gap:88px;width:max-content;animation:ls-slide 34s linear infinite}
+#ls-root .marquee:hover .marquee__track{animation-play-state:paused}
+#ls-root .marquee__track span{
+  font-size:26px;font-weight:700;line-height:1;letter-spacing:.02em;white-space:nowrap;color:#fff;opacity:.95;
+}
+@keyframes ls-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════ RESULTS CAROUSEL ═══════════════════════ */
+#ls-root .rail{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:2px}
+#ls-root .rail::-webkit-scrollbar{display:none}
+#ls-root .result{
+  flex:0 0 500px;max-width:88vw;scroll-snap-align:start;position:relative;overflow:hidden;
+  border:1px solid var(--line);border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;gap:24px;
+}
+#ls-root .result::before{
+  content:"";position:absolute;width:726px;height:726px;right:-327px;top:-377px;
+  background:var(--purple);opacity:.3;filter:blur(120px);pointer-events:none;z-index:-1;
+}
+#ls-root .result__hd{display:flex;flex-direction:column;gap:16px}
+#ls-root .result__label{font-size:14px;font-weight:500;line-height:21px;text-transform:uppercase;color:var(--muted)}
+#ls-root .result__big{font-size:clamp(22px,2.4vw,28px);font-weight:700;line-height:140%;letter-spacing:-.05em;color:var(--gold)}
+#ls-root .result__quote{font-size:18px;font-weight:700;line-height:140%;letter-spacing:-.05em}
+#ls-root .result .video{aspect-ratio:452/266;border-radius:12px;display:flex;align-items:center;justify-content:center}
+#ls-root .result .play{position:static;translate:none}
+#ls-root .byline{display:flex;align-items:center;gap:16px}
+#ls-root .byline__img{width:24px;height:24px;border-radius:4px;overflow:hidden;border:.375px solid var(--line);flex:none}
+#ls-root .byline p{display:flex;align-items:center;gap:4px;flex-wrap:wrap;font-size:12px;font-weight:500;line-height:18px;text-transform:uppercase}
+#ls-root .byline p i{width:2px;height:2px;background:var(--muted);flex:none}
+#ls-root .byline em{font-style:normal;color:var(--muted)}
+#ls-root .railnav{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-top:32px;height:32px}
+#ls-root .dots{display:flex;align-items:center;gap:4px}
+#ls-root .dots button{width:6px;height:6px;border-radius:1000px;background:var(--line-2);transition:all .2s ease}
+#ls-root .dots button[aria-current="true"]{width:8px;height:8px;background:var(--gold)}
+#ls-root .arrows{display:flex;align-items:center;gap:16px}
+#ls-root .arrows button{
+  width:32px;height:32px;border-radius:1000px;border:1.33px solid var(--line);
+  display:flex;align-items:center;justify-content:center;transition:background-color .2s,border-color .2s;
+}
+#ls-root .arrows button.is-on{background:var(--line-2);border-color:var(--line-2)}
+#ls-root .arrows button:hover{border-color:var(--purple-lt)}
+
+/* ═══════════════════════ COMMUNITY MASONRY ═══════════════════════ */
+#ls-root .masonry{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start;margin-top:48px}
+#ls-root .mcol{display:flex;flex-direction:column;gap:16px}
+#ls-root .shot{width:100%;border-radius:8px;overflow:hidden;cursor:zoom-in;padding:0;border:0;background:transparent;display:block;text-align:left}
+#ls-root .shot:focus-visible{outline:2px solid var(--purple-lt);outline-offset:3px}
+#ls-root .ls-lightbox{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(11,10,18,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#ls-root .ls-lightbox.is-open{display:flex}
+#ls-root .ls-lightbox__img{max-width:min(960px,100%);max-height:min(90vh,100%);border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.55);object-fit:contain;background:#0f0e18}
+#ls-root .ls-lightbox__close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:rgba(247,238,255,.08);color:var(--text);font-size:22px;line-height:1;cursor:pointer}
+
+/* ═══════════════════════ PLAYBOOKS ═══════════════════════ */
+#ls-root .cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
+#ls-root .card{display:flex;flex-direction:column;gap:24px}
+#ls-root .card__media{aspect-ratio:384/210;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+#ls-root .card__body{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+#ls-root .card__title{font-size:20px;font-weight:700;line-height:120%;letter-spacing:-.03em}
+#ls-root .card__text{font-size:14px;font-weight:400;line-height:140%;color:var(--muted)}
+
+/* ═══════════════════════ CAREERS ═══════════════════════ */
+#ls-root .jobs{display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:48px}
+#ls-root .job{
+  width:100%;max-width:588px;padding:24px;border-radius:8px;
+  background:rgba(247,238,255,.02);border:1px dashed var(--line);
+  display:flex;flex-direction:column;gap:16px;
+  transition:border-color .2s,background-color .2s,transform .2s;
+}
+#ls-root .job:hover{border-color:var(--purple-lt);background:rgba(172,88,235,.05);transform:translateY(-2px)}
+#ls-root .job__top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#ls-root .job__title{font-size:18px;font-weight:700;line-height:27px}
+#ls-root .pill{
+  display:inline-flex;align-items:center;gap:8px;height:30px;padding:8px;
+  border:1px solid var(--line);border-radius:4px;
+  font-size:12px;font-weight:600;line-height:120%;white-space:nowrap;
+}
+#ls-root .pill i{width:4px;height:4px;flex:none}
+#ls-root .job p{font-size:14px;font-weight:400;line-height:140%;color:var(--muted)}
+#ls-root .meta{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px;line-height:140%}
+#ls-root .meta span{display:inline-flex;align-items:center;gap:8px}
+#ls-root .meta em{width:3px;height:3px;background:var(--muted);border-radius:1000px;display:block}
+
+/* ═══════════════════════ FAQ ═══════════════════════ */
+#ls-root .faq{display:grid;grid-template-columns:216px minmax(0,659px);gap:48px;justify-content:space-between}
+#ls-root .faq__title{font-size:clamp(30px,3.4vw,40px);font-weight:700;line-height:90%;letter-spacing:-.02em;margin-top:24px}
+#ls-root .faq .eyebrow{color:var(--muted)}
+#ls-root .acc{display:flex;flex-direction:column}
+#ls-root .acc__item{border:1px solid var(--line);margin-bottom:-1px}
+#ls-root .acc__item:first-child{border-radius:8px 8px 0 0}
+#ls-root .acc__item:last-child{border-radius:0 0 8px 8px;margin-bottom:0}
+#ls-root .acc__btn{
+  width:100%;min-height:51px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:16px 24px;text-align:left;
+  font-size:16px;font-weight:500;line-height:120%;letter-spacing:-.03em;color:var(--muted);
+  transition:color .2s ease;
+}
+#ls-root .acc__btn:hover{color:var(--text)}
+#ls-root .acc__item.is-open .acc__btn{color:var(--text);font-weight:700}
+#ls-root .acc__btn svg{flex:none;transition:transform .25s ease}
+#ls-root .acc__item.is-open .acc__btn svg{transform:rotate(180deg)}
+#ls-root .acc__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+#ls-root .acc__item.is-open .acc__panel{grid-template-rows:1fr}
+#ls-root .acc__inner{overflow:hidden}
+#ls-root .acc__inner>div{display:flex;gap:16px;padding:0 24px 16px}
+#ls-root .acc__inner i{width:4.72px;height:4.72px;background:var(--purple);flex:none;margin-top:8px}
+#ls-root .acc__inner p{font-size:14px;font-weight:400;line-height:140%}
+
+/* ═══════════════════════ SURVEY ═══════════════════════ */
+#ls-root .survey-sec{padding:8px}
+#ls-root .survey-box{
+  max-width:var(--page);margin:0 auto;padding:48px var(--gut);border-radius:16px;position:relative;
+  display:flex;flex-direction:column;align-items:center;gap:40px;isolation:isolate;
+}
+#ls-root .survey-hd{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+#ls-root .survey-hd h2{font-size:clamp(26px,3.3vw,40px);font-weight:700;line-height:90%;letter-spacing:-.02em}
+#ls-root .survey{
+  width:100%;max-width:860px;padding:24px;border-radius:12px;background:rgba(247,238,255,.02);
+  display:flex;flex-direction:column;gap:24px;
+}
+#ls-root .survey-embed{
+  width:100%;max-width:860px;padding:8px;border-radius:12px;background:rgba(247,238,255,.02);
+  border:1px solid var(--line);overflow:hidden;min-height:520px;
+}
+#ls-root .survey-embed [data-tf-live],
+#ls-root .survey-embed [data-tf-live] > div,
+#ls-root .survey-embed iframe{width:100%!important;min-height:520px!important;height:520px!important;border:0}
+#ls-root .survey__q{display:flex;align-items:center;gap:16px}
+#ls-root .num{
+  width:20px;height:20px;border-radius:5px;background:var(--text);color:var(--ink);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:11.67px;font-weight:700;
+}
+#ls-root .survey__q b{font-size:16px;font-weight:700;line-height:120%;letter-spacing:-.03em}
+#ls-root .survey__row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+#ls-root .opts{display:flex;flex-direction:column;gap:8px;width:338px;max-width:100%}
+#ls-root .opt{
+  display:flex;align-items:center;gap:12px;height:45px;padding:12px 24px 12px 16px;
+  background:rgba(247,238,255,.08);border-radius:8px;text-align:left;
+  font-size:14px;font-weight:700;line-height:21px;white-space:nowrap;transition:background-color .2s ease;
+}
+#ls-root .opt:hover{background:rgba(247,238,255,.15)}
+#ls-root .opt__key{
+  width:20px;height:20px;border:.83px solid var(--text);border-radius:5px;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:11.67px;font-weight:500;transition:all .2s ease;
+}
+#ls-root .opt.is-on{background:rgba(172,88,235,.3)}
+#ls-root .opt.is-on .opt__key{background:var(--text);color:var(--ink)}
+#ls-root .survey .btn{height:42px;padding:12px 18px 12px 16px}
+#ls-root .survey-err{font-size:12px;color:var(--gold);display:none}
+#ls-root .survey.has-err .survey-err{display:block}
+
+/* ═══════════════════════ FOOTER ═══════════════════════ */
+#ls-root .footer{padding:48px 8px}
+#ls-root .footer__in{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+#ls-root .footer__logo{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+#ls-root .footer__logo .logo__mark{width:20px;height:28px}
+#ls-root .footer small{font-size:12px;font-weight:400;line-height:140%}
+#ls-root .footer small a:hover{color:var(--gold)}
+
+/* ═══════════════════════ DOODLE ARROWS ═══════════════════════ */
+#ls-root .doodle{position:absolute;width:78px;height:38px;z-index:1;pointer-events:none}
+#ls-root .doodle svg{width:100%;height:100%;overflow:visible}
+#ls-root .doodle--l{left:calc(50% - 648px);top:250px;transform:rotate(6deg)}
+#ls-root .doodle--r{right:calc(50% - 648px);top:250px;transform:scaleX(-1) rotate(6deg)}
+#ls-root .doodle--side{right:calc(50% - 655px);top:96px;transform:rotate(150deg) scaleY(-1)}
+@media (max-width:1400px){#ls-root .doodle{display:none}}
+
+/* ═══════════════════════ REVEAL ═══════════════════════ */
+#ls-root .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+#ls-root .rv.is-in{opacity:1;transform:none}
+
+/* ═══════════════════════ RESPONSIVE ═══════════════════════ */
+@media (max-width:1240px){
+  #ls-root .nav{padding:24px 40px}
+  #ls-root .hero__grid{gap:32px}
+  #ls-root .vsl{width:min(50%,535px)}
+}
+@media (max-width:991px){
+  #ls-root .nav__in{position:relative}
+  #ls-root .menu{
+    display:none;position:absolute;top:60px;left:0;right:0;z-index:40;
+    flex-direction:column;align-items:flex-start;gap:18px;
+    background:#12111c;border:1px solid var(--line);border-radius:12px;padding:20px;
+  }
+  #ls-root .menu.is-open{display:flex}
+  #ls-root .burger{display:flex}
+  #ls-root .nav__cta{display:none}
+  #ls-root .sec{padding:64px 8px}
+  #ls-root .nav{padding:20px 24px}
+  #ls-root .hero__body{padding:40px 0 56px}
+  #ls-root .hero__grid{flex-direction:column;align-items:stretch}
+  #ls-root .hero__col{width:100%}
+  #ls-root .vsl{width:100%}
+  #ls-root .case{grid-template-columns:minmax(0,1fr);gap:24px}
+  #ls-root .quote{grid-template-columns:minmax(0,1fr);gap:32px;padding:32px 0}
+  #ls-root .quote__who{flex-direction:row;align-items:center;justify-content:flex-start;gap:20px}
+  #ls-root .who__name{margin-top:0}
+  #ls-root .steps{grid-template-columns:minmax(0,1fr);gap:32px}
+  #ls-root .step{padding:0}
+  #ls-root .step+.step{border-left:0;border-top:1px solid var(--line);padding-top:32px}
+  #ls-root .cards3{grid-template-columns:minmax(0,1fr)}
+  #ls-root .faq{grid-template-columns:minmax(0,1fr);gap:32px}
+  #ls-root .faq__title{margin-top:0}
+  #ls-root .masonry{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #ls-root .result{flex:0 0 min(500px,86vw)}
+}
+@media (max-width:749px){
+  #ls-root{--gut:16px}
+  #ls-root .sec{padding:56px 8px}
+  #ls-root .nav{padding:16px}
+  #ls-root .hero__h1{font-size:clamp(30px,8.6vw,40px)}
+  #ls-root .stats{gap:20px}
+  #ls-root .stat{flex:1 1 40%;min-width:0}
+  #ls-root .stat-div{display:none}
+  #ls-root .grid2{grid-template-columns:minmax(0,1fr)}
+  #ls-root .masonry{grid-template-columns:minmax(0,1fr)}
+  #ls-root .btn{font-size:16px;padding:14px 18px}
+  #ls-root .btn--wide{text-align:left}
+  #ls-root .trust--bar{gap:8px;padding:16px;justify-content:center}
+  #ls-root .marquee::before,#ls-root .marquee::after{width:40px}
+  #ls-root .marquee__track{gap:48px}
+  #ls-root .marquee__track span{font-size:20px}
+  #ls-root .trust--bar .stars i{width:18px;height:18px}
+  #ls-root .survey__row{flex-direction:column;align-items:stretch}
+  #ls-root .survey__row .btn{width:100%}
+  #ls-root .opts{width:100%}
+  #ls-root .opt{white-space:normal;height:auto;min-height:45px}
+  #ls-root .meta{justify-content:flex-start}
+  #ls-root .quote__who{flex-direction:column;align-items:flex-start}
+  #ls-root .survey-box{padding:32px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  #ls-root *,#ls-root *::before,#ls-root *::after{
+    animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important
+  }
+  #ls-root .rv{opacity:1;transform:none}
+}
+
+
+
+/* KEEP: spacing + font sizes from current polish */
+html{ -webkit-text-size-adjust:100%; text-size-adjust:100% }
+body{ overflow-x:clip; background:#0B0A12; margin:0 }
+#ls-root{ overflow-x:clip }
+
+@media (max-width:991px){
+  #ls-root .sec{ padding:52px 0 !important }
+  #ls-root .sec--tight{ padding:36px 0 !important }
+  #ls-root .wrap{ padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)) }
+  #ls-root .head{ gap:14px }
+  #ls-root .h2{ font-size:clamp(28px,7.6vw,40px) !important; line-height:1.02 !important; letter-spacing:-.03em !important }
+  #ls-root .eyebrow{ font-size:11px; letter-spacing:.04em }
+  #ls-root .hero__body{ padding:20px 0 36px !important }
+  #ls-root .hero__grid{ gap:26px !important }
+  #ls-root .hero__col{ gap:22px !important }
+  #ls-root .hero__copy{ gap:16px !important }
+  #ls-root .hero__h1{ font-size:clamp(30px,8.4vw,40px) !important; line-height:1.05 !important }
+  #ls-root .hero__sub{ font-size:15px !important; line-height:155% !important }
+  #ls-root .btn{ min-height:48px; font-size:16px !important; padding:14px 18px !important }
+  #ls-root .stat b{ font-size:clamp(20px,5.8vw,28px) !important; line-height:1 }
+  #ls-root .stat span{ font-size:11px !important; line-height:130% !important }
+  #ls-root .stats{ gap:10px !important }
+  #ls-root .case__title{ font-size:clamp(20px,5.4vw,26px) !important; line-height:1.15 !important }
+  #ls-root .cases{ gap:36px !important; margin-top:28px !important }
+  #ls-root .case{ gap:16px !important }
+  #ls-root .case__copy{ gap:14px !important }
+  #ls-root .quote{ padding:20px 0 !important; gap:22px !important }
+  #ls-root .quote__text{ font-size:clamp(17px,4.6vw,22px) !important; line-height:140% !important; letter-spacing:-.03em !important }
+  #ls-root .step{ gap:10px !important; padding:22px 0 !important }
+  #ls-root .step+.step{ padding-top:22px !important }
+  #ls-root .result{ padding:18px !important; gap:16px !important }
+  #ls-root .result__quote{ font-size:15px !important; line-height:145% }
+  #ls-root .railnav{ margin-top:18px; gap:14px }
+  #ls-root .masonry{ gap:12px !important; margin-top:24px !important }
+  #ls-root .cards3{ gap:24px !important; margin-top:24px !important }
+  #ls-root .card{ gap:14px !important }
+  #ls-root .card__title{ font-size:18px !important }
+  #ls-root .job{ padding:18px !important }
+  #ls-root .faq{ gap:22px !important }
+  #ls-root .acc__btn{ padding:16px !important; gap:14px; font-size:15px !important; min-height:54px }
+  #ls-root .acc__inner>div{ padding:0 16px 16px !important }
+  #ls-root .survey-box{ padding:28px 0 !important; gap:24px !important }
+  #ls-root .survey{ padding:18px !important }
+  #ls-root .survey__q b{ font-size:15px !important; line-height:140% }
+  #ls-root .opt{ min-height:50px; padding:12px 14px !important }
+  #ls-root .nav{ padding:12px 16px !important; padding-top:calc(12px + env(safe-area-inset-top,0px)) !important }
+  #ls-root .nav__in{ height:48px; gap:12px }
+  #ls-root .logo{ font-size:12px; letter-spacing:.08em }
+  #ls-root .menu a{ padding:14px 14px; font-size:15px !important; line-height:1.2 !important }
+  #ls-root .footer{ padding:40px 16px calc(28px + env(safe-area-inset-bottom,0px)) !important }
+  #ls-root .footer__logo{ font-size:16px !important; letter-spacing:.1em }
+  #ls-root .footer small{ font-size:11px; line-height:160% }
+  #ls-root .apply-hero, #ls-root .ty-hero{ padding:20px 0 40px !important }
+  #ls-root .apply-layout{ gap:28px !important; margin-top:12px !important }
+  #ls-root .apply-copy{ gap:18px !important }
+  #ls-root .apply-copy .h1, #ls-root .ty-hero .h1{ font-size:clamp(28px,7.8vw,40px) !important; line-height:1.05 !important }
+  #ls-root .apply-copy .lead, #ls-root .ty-hero .lead{ font-size:15px !important; line-height:155% !important }
+  #ls-root .apply-points{ gap:14px !important }
+  #ls-root .apply-point p{ font-size:14px !important; line-height:150% }
+  #ls-root .form-card{ padding:18px !important; gap:14px !important }
+  #ls-root .form-card h3{ font-size:20px !important }
+  #ls-root .field input, #ls-root .field textarea{ font-size:16px !important; min-height:48px; padding:12px 14px !important }
+  #ls-root .page-hero__in{ gap:18px !important; padding-top:12px !important }
+  #ls-root .page-hero__in .h1{ font-size:clamp(28px,7.8vw,40px) !important; line-height:1.05 !important }
+  #ls-root .benefit, #ls-root .value{ padding:18px !important }
+  #ls-root .benefit h3, #ls-root .value h3{ font-size:17px !important; margin-bottom:8px }
+  #ls-root .benefit p, #ls-root .value p{ font-size:14px !important; line-height:150% !important }
+  #ls-root .vsl__bar b{ font-size:12px !important }
+  #ls-root .tag{ font-size:12px; padding:5px 8px }
+}
+@media (max-width:749px){
+  #ls-root{ --gut:16px }
+  #ls-root .hero__body{ padding-top:16px !important }
+  #ls-root .sec{ padding:44px 0 !important }
+  #ls-root .btn{ font-size:16px; padding:14px 18px }
+  #ls-root .marquee__track span{ font-size:20px }
+}
+@media (max-width:390px){
+  #ls-root .hero__h1{ font-size:clamp(28px,8.8vw,34px) !important }
+  #ls-root .logo{ font-size:11px; letter-spacing:.04em }
+  #ls-root .stat b{ font-size:clamp(18px,5.5vw,24px) !important }
+  #ls-root .stat span{ font-size:10px !important }
+}
+
+</style>
+<link rel="stylesheet" href="css/ls-enhance.css">
+</head>
+<body>
+
+<div id="ls-root">
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <header class="hero">
+    <div class="hero__bg ph" data-ph="hero-bg" data-bg="../assets/Hero-v3-1.avif"></div>
+    <div class="hero__veil"></div>
+
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__in">
+        <a href="index.html" class="logo"><img src="../assets/ls-logo.png" alt="License &amp; Scale" width="220" height="30"></a>
+
+        <ul class="menu" id="ls-menu">
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="#playbooks">Playbooks</a></li>
+          <li><a href="career.html">Careers</a></li>
+        </ul>
+
+        <a href="apply.html" class="btn btn--ghost btn--sm nav__cta">
+          Apply Now
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <button class="burger" id="ls-burger" aria-label="Open menu" aria-expanded="false" aria-controls="ls-menu"><i></i></button>
+      </div>
+    </nav>
+
+    <div class="hero__body">
+      <div class="wrap hero__grid">
+
+        <div class="hero__col">
+          <div class="hero__copy">
+            <div class="trust">
+              <span class="tp">
+                <svg width="16.75" height="16" viewBox="0 0 24 24" fill="#00B77B" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg>
+                <b>Trustpilot</b>
+              </span>
+              <span class="stars" role="img" aria-label="Rated 4.8 out of 5">
+                <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+                <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+                <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+                <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+                <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+              </span>
+              <span class="v">4.8</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span class="v">Excellent</span>
+            </div>
+
+            <h1 class="hero__h1">
+              Start an AI agency<br>
+              <span class="mark">Scale</span><span class="rocket" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none"><path d="M20 26.7c-2 2.7-5.3 4.2-8.3 3.6-.6-3 .9-6.3 3.6-8.3" stroke="#F7EEFF" stroke-width="3.33" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3 21.7l-5 1.6L6.7 30l6.6-1.7" stroke="#F7EEFF" stroke-width="3.33" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.3 6.7c-8.3-.7-14.2 3.3-18.3 10l8.3 8.3c6.7-4.1 10.7-10 10-18.3z" fill="#F7D277" stroke="#F7EEFF" stroke-width="3.33" stroke-linejoin="round"/><circle cx="27" cy="13" r="2.4" fill="#0B0A12"/></svg>
+              </span> it to<br>
+              seven figures
+            </h1>
+
+            <p class="hero__sub">License &amp; Scale gives you the exact systems behind a $8M+ a year agency that&rsquo;s still running today.</p>
+
+            <a href="apply.html" class="btn btn--light">
+              Apply Now
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>$8M+</b><span>Agency revenue / year</span></div>
+            <div class="stat-div" aria-hidden="true"></div>
+            <div class="stat"><b>89%</b><span>Sign their first clients</span></div>
+            <div class="stat-div" aria-hidden="true"></div>
+            <div class="stat"><b>71%</b><span>Reach $10k / month</span></div>
+          </div>
+        </div>
+
+        <div class="vsl">
+          <div class="vsl__bar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 9v6h4l5 4V5L6 9H2z" fill="#F7EEFF" stroke="#F7EEFF" stroke-width="2" stroke-linejoin="round"/><path d="M16 9v6M19.5 6.5v11" stroke="#F7EEFF" stroke-width="2" stroke-linecap="round"/></svg>
+            <b>Click &lsquo;Play&rsquo; To See How It Works</b>
+          </div>
+          <div class="vsl__frame">
+            <script src="https://fast.wistia.com/player.js" async></script>
+            <script src="https://fast.wistia.com/embed/8siksc8ifv.js" async type="module"></script>
+            <wistia-player media-id="8siksc8ifv" aspect="1.7777777777777777" style="position:absolute;inset:0;width:100%;height:100%"></wistia-player>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════ CASE STUDIES ══════════════════ -->
+  <section class="sec" id="case-studies">
+    <span class="glow glow--strong glow--top" aria-hidden="true"></span>
+
+    <span class="doodle doodle--l" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M4 4C26 2 54 10 70 34" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M52 32l20 6-2-20" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="doodle doodle--r" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M4 4C26 2 54 10 70 34" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M52 32l20 6-2-20" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+
+    <div class="wrap">
+      <div class="head head--c rv">
+        <span class="eyebrow eyebrow--c">Case studies</span>
+        <h2 class="h2">See what the systems actually do</h2>
+      </div>
+
+      <div class="cases">
+
+        <article class="case rv">
+          <button type="button" class="video" data-yt="QQS_Q9q_VVg" aria-label="Play: how this agency went from $60k to $100k a month">
+            <div class="ph" data-ph="case-1" data-bg="https://img.youtube.com/vi/QQS_Q9q_VVg/hqdefault.jpg"></div>
+            <span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span>
+          </button>
+          <div class="case__copy">
+            <span class="tag">6-Figure Company</span>
+            <h3 class="case__title"><button type="button" class="case__title-btn" data-yt-play="QQS_Q9q_VVg">How This Agency Went From $60 to $100k mo in 4 Months</button></h3>
+            <button type="button" class="btn btn--ghost" data-yt-play="QQS_Q9q_VVg">Watch Case Study
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="case rv">
+          <button type="button" class="video" data-yt="ZUncuGa1cRA" aria-label="Play: scaling an agency to $130,000 a month">
+            <div class="ph" data-ph="case-2" data-bg="https://img.youtube.com/vi/ZUncuGa1cRA/hqdefault.jpg"></div>
+            <span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span>
+          </button>
+          <div class="case__copy">
+            <span class="tag">6-Figure Company</span>
+            <h3 class="case__title"><button type="button" class="case__title-btn" data-yt-play="ZUncuGa1cRA">Scaling an Agency to $130,000/mo</button></h3>
+            <button type="button" class="btn btn--ghost" data-yt-play="ZUncuGa1cRA">Watch Case Study
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="case rv">
+          <button type="button" class="video" data-yt="0dhClbE5Sc8" aria-label="Play: I doubled a stranger's agency in 30 days">
+            <div class="ph" data-ph="case-3" data-bg="https://img.youtube.com/vi/0dhClbE5Sc8/hqdefault.jpg"></div>
+            <span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span>
+          </button>
+          <div class="case__copy">
+            <span class="tag">6-Figure Company</span>
+            <h3 class="case__title"><button type="button" class="case__title-btn" data-yt-play="0dhClbE5Sc8">I Doubled a Stranger&rsquo;s Agency in 30 Days (Copy Him)</button></h3>
+            <button type="button" class="btn btn--ghost" data-yt-play="0dhClbE5Sc8">Watch Case Study
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <div class="trust trust--bar rv">
+          <span class="tp">
+            <svg width="24.6" height="23.5" viewBox="0 0 24 24" fill="#00B77B" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg>
+            <b>Trustpilot</b>
+          </span>
+          <span class="stars" role="img" aria-label="Rated 4.8 out of 5">
+            <i><svg width="15.9" height="15.2" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+            <i><svg width="15.9" height="15.2" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+            <i><svg width="15.9" height="15.2" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+            <i><svg width="15.9" height="15.2" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+            <i><svg width="15.9" height="15.2" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+          </span>
+          <span class="v">4.8</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="v">Excellent</span>
+        </div>
+
+        <div class="grid2 rv">
+          <button type="button" class="video" data-yt="oiAgRlYTwXw" aria-label="Play case study"><div class="ph" data-ph="grid-1" data-bg="https://img.youtube.com/vi/oiAgRlYTwXw/hqdefault.jpg"></div><span class="play" aria-hidden="true"><svg width="15" height="13" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+          <button type="button" class="video" data-yt="wBw5aH63QL4" aria-label="Play case study"><div class="ph" data-ph="grid-2" data-bg="https://img.youtube.com/vi/wBw5aH63QL4/hqdefault.jpg"></div><span class="play" aria-hidden="true"><svg width="15" height="13" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+        </div>
+        <div class="grid2 rv">
+          <button type="button" class="video" data-yt="GvILIC9LnAM" aria-label="Play case study"><div class="ph" data-ph="grid-3" data-bg="https://img.youtube.com/vi/GvILIC9LnAM/hqdefault.jpg"></div><span class="play" aria-hidden="true"><svg width="15" height="13" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+          <button type="button" class="video" data-yt="huTae13Zx_w" aria-label="Play case study"><div class="ph" data-ph="grid-4" data-bg="https://img.youtube.com/vi/huTae13Zx_w/hqdefault.jpg"></div><span class="play" aria-hidden="true"><svg width="15" height="13" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+        </div>
+        <div class="grid2 rv">
+          <button type="button" class="video" data-yt="6ziX798KonY" aria-label="Play case study"><div class="ph" data-ph="grid-5" data-bg="https://img.youtube.com/vi/6ziX798KonY/hqdefault.jpg"></div><span class="play" aria-hidden="true"><svg width="15" height="13" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+          <button type="button" class="video" data-yt="7jXygj_eeF8" aria-label="Play case study"><div class="ph" data-ph="grid-6" data-bg="https://img.youtube.com/vi/7jXygj_eeF8/hqdefault.jpg"></div><span class="play" aria-hidden="true"><svg width="15" height="13" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+        </div>
+
+        <a href="results.html" class="btn btn--outline rv">
+          See more Case Studies
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M11 3 3 11M3 11h6.4M3 11V4.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ TESTIMONIAL + PROCESS ══════════════════ -->
+  <section class="sec" id="programs">
+    <span class="glow glow--btm" aria-hidden="true" style="bottom:-109px;width:min(1042px,100%)"></span>
+    <span class="doodle doodle--side" style="top:14px" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M4 4C26 2 54 10 70 34" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M52 32l20 6-2-20" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+
+    <div class="wrap">
+      <div class="quote rv">
+        <div class="quote__who">
+          <div>
+            <div class="avatar"><div class="ph" data-ph="avatar-chris" data-bg="../assets/Frame-1484582068.png"></div></div>
+            <p class="who__name">Chris</p>
+            <p class="who__role">Agency owner, License &amp; Scale client</p>
+          </div>
+          <div class="press">Forbes</div>
+        </div>
+
+        <div class="quote__body">
+          <blockquote class="quote__text">&ldquo;Five months ago, I was stuck at $15K a month with nothing but hustle behind it. Now we&rsquo;re consistently pulling $84K a month, real systems running acquisition and sales instead of me.&rdquo;</blockquote>
+          <a href="#apply" class="btn btn--outline btn--wide">
+            See how Chris scaled from $15K to $84K a month in 5 months
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="steps-wrap rv">
+        <h2 class="h2">The shortest path from stuck to scaled.</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step__hd">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.4" cy="10.4" r="7.4" stroke="#F7EEFF" stroke-width="1.5"/><path d="M16.6 16.6 21 21" stroke="#F7EEFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Diagnose
+            </div>
+            <p>One constraint, not a checklist. We isolate the single thing actually capping growth at your stage. No generic audit, no vague action items.</p>
+          </div>
+          <div class="step">
+            <div class="step__hd">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="3" width="20" height="13" stroke="#F7EEFF" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 21h8M12 16v5" stroke="#F7EEFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Install
+            </div>
+            <p>Copy and paste, not theory. The exact playbooks, scripts, and SOPs already running a $3M a year agency. No rebuilding from scratch, no filling in blanks yourself.</p>
+          </div>
+          <div class="step">
+            <div class="step__hd">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#F7EEFF" stroke-width="1.5"/><path d="M7 15l3.5-4 3 3L17 9" stroke="#F7EEFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Scale
+            </div>
+            <p>Weekly calls, not a course you forget. Live accountability from us and other agency owners until the constraint is gone. No disappearing after checkout, no replays.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ PRESS ══════════════════ -->
+  <section class="sec sec--tight">
+    <span class="glow glow--btm" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="press-hd">Trusted by Leading Agencies Worldwide</p>
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>VOGUE</span><span>BuzzFeed</span><span>Forbes</span><span>FAST COMPANY</span><span>GQ</span>
+          <span>VOGUE</span><span>BuzzFeed</span><span>Forbes</span><span>FAST COMPANY</span><span>GQ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ VERIFIED OUTCOMES ══════════════════ -->
+  <section class="sec" id="results" style="padding-top:100px">
+    <span class="doodle doodle--side" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M4 4C26 2 54 10 70 34" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M52 32l20 6-2-20" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Verified Case Studies</span>
+        <h2 class="h2">Numbers from agencies running today</h2>
+      </div>
+
+      <div class="rail rv" id="ls-rail" tabindex="0" role="group" aria-label="Client results — scroll horizontally" style="margin-top:48px">
+
+        <article class="result">
+          <div class="result__hd">
+            <span class="result__label">Revenue growth</span>
+            <p class="result__big">$20K to $110K a month</p>
+            <p class="result__quote">&ldquo;When I joined five months ago, we were doing around $20K. A few months later, we scaled to $55K. Last month, we hit $110K.&rdquo;</p>
+          </div>
+          <button type="button" class="video" data-yt="oiAgRlYTwXw" aria-label="Watch this result">
+            <div class="ph" data-ph="result-1" data-bg="https://img.youtube.com/vi/oiAgRlYTwXw/hqdefault.jpg" style="position:absolute;inset:0"></div>
+            <span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span>
+          </button>
+          <div class="byline">
+            <span class="byline__img"><span class="ph" data-ph="rby-1" data-bg="../assets/Frame-1484582068.png"></span></span>
+            <p>Chris <i aria-hidden="true"></i> <em>Agency owner, License &amp; Scale client</em></p>
+          </div>
+        </article>
+
+        <article class="result">
+          <div class="result__hd">
+            <span class="result__label">Churn reduction</span>
+            <p class="result__big">30% down to 7%</p>
+            <p class="result__quote">&ldquo;Our churn rate before joining was super high, about 30%. Now it&rsquo;s about 7%. Between all the fulfillment systems I&rsquo;ve seen, yours is by far the best.&rdquo;</p>
+          </div>
+          <button type="button" class="video" data-yt="wBw5aH63QL4" aria-label="Watch this result">
+            <div class="ph" data-ph="result-2" data-bg="https://img.youtube.com/vi/wBw5aH63QL4/hqdefault.jpg" style="position:absolute;inset:0"></div>
+            <span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span>
+          </button>
+          <div class="byline">
+            <span class="byline__img"><span class="ph" data-ph="rby-2" data-bg="../assets/Frame-1484582068.png"></span></span>
+            <p>Chris <i aria-hidden="true"></i> <em>Agency owner, License &amp; Scale client</em></p>
+          </div>
+        </article>
+
+        <article class="result">
+          <div class="result__hd">
+            <span class="result__label">Revenue growth</span>
+            <p class="result__big">$20K to $110K a month</p>
+            <p class="result__quote">&ldquo;When I joined five months ago, we were doing around $20K. A few months later, we scaled to $55K. Last month, we hit $110K.&rdquo;</p>
+          </div>
+          <button type="button" class="video" data-yt="GvILIC9LnAM" aria-label="Watch this result">
+            <div class="ph" data-ph="result-3" data-bg="https://img.youtube.com/vi/GvILIC9LnAM/hqdefault.jpg" style="position:absolute;inset:0"></div>
+            <span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span>
+          </button>
+          <div class="byline">
+            <span class="byline__img"><span class="ph" data-ph="rby-3" data-bg="../assets/Frame-1484582068.png"></span></span>
+            <p>Chris <i aria-hidden="true"></i> <em>Agency owner, License &amp; Scale client</em></p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="railnav">
+        <div class="dots" id="ls-dots">
+          <button type="button" aria-label="Go to result 1" aria-current="true"></button>
+          <button type="button" aria-label="Go to result 2"></button>
+          <button type="button" aria-label="Go to result 3"></button>
+        </div>
+        <div class="arrows">
+          <button type="button" id="ls-prev" aria-label="Previous result"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M9 2 4 7l5 5" stroke="#AAA5AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" id="ls-next" class="is-on" aria-label="Next result"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="#F7EEFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ COMMUNITY ══════════════════ -->
+  <section class="sec">
+    <span class="doodle doodle--side" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M4 4C26 2 54 10 70 34" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M52 32l20 6-2-20" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Real messages from real members</span>
+        <h2 class="h2">Unedited. Straight from the community</h2>
+      </div>
+
+      <div class="masonry rv">
+        <div class="mcol">
+          <button type="button" class="shot" style="height:97px" data-zoom="../assets/image-3.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-1" data-bg="../assets/image-3.avif"></div></button>
+          <button type="button" class="shot" style="height:245px" data-zoom="../assets/image-4-1.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-2" data-bg="../assets/image-4-1.avif"></div></button>
+          <button type="button" class="shot" style="height:291px" data-zoom="../assets/image-6-1.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-3" data-bg="../assets/image-6-1.avif"></div></button>
+          <button type="button" class="shot" style="height:113px" data-zoom="../assets/image-7-1.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-4" data-bg="../assets/image-7-1.avif"></div></button>
+        </div>
+        <div class="mcol">
+          <button type="button" class="shot" style="height:245px" data-zoom="../assets/image-5.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-5" data-bg="../assets/image-5.avif"></div></button>
+          <button type="button" class="shot" style="height:291px" data-zoom="../assets/image-9-1.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-6" data-bg="../assets/image-9-1.avif"></div></button>
+          <button type="button" class="shot" style="height:321px" data-zoom="../assets/asset-24.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-7" data-bg="../assets/asset-24.avif"></div></button>
+        </div>
+        <div class="mcol">
+          <button type="button" class="shot" style="height:321px" data-zoom="../assets/asset-19.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-8" data-bg="../assets/asset-19.avif"></div></button>
+          <button type="button" class="shot" style="height:113px" data-zoom="../assets/asset-20.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-9" data-bg="../assets/asset-20.avif"></div></button>
+          <button type="button" class="shot" style="height:204px" data-zoom="../assets/asset-14.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-10" data-bg="../assets/asset-14.avif"></div></button>
+          <button type="button" class="shot" style="height:245px" data-zoom="../assets/asset-21.avif" aria-label="Zoom member message"><div class="ph" data-ph="msg-11" data-bg="../assets/asset-21.avif"></div></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ PLAYBOOKS ══════════════════ -->
+  <section class="sec" id="playbooks">
+    <span class="doodle doodle--side" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M4 4C26 2 54 10 70 34" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M52 32l20 6-2-20" stroke="#F7EEFF" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Free resources</span>
+        <h2 class="h2">The playbooks running our own agency</h2>
+      </div>
+
+      <div class="cards3 rv">
+        <article class="card">
+          <button type="button" class="card__media video" data-yt="HN385UCFjLs" data-yt-start="855" aria-label="Play playbook"><div class="ph" data-ph="playbook-1" data-bg="../assets/Frame-1484582068.avif"></div><span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+          <div class="card__body">
+            <h3 class="card__title">Live AI business audit</h3>
+            <p class="card__text">A real agency operator opens their books. Cameron maps every task that can be automated, ranked by dollar impact.</p>
+            <button type="button" class="btn btn--ghost" data-yt-play="HN385UCFjLs">Access Now
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <button type="button" class="card__media video" data-yt="h6xU2EFVevE" data-yt-start="285" aria-label="Play playbook"><div class="ph" data-ph="playbook-2" data-bg="../assets/Frame-1484582068-1.avif"></div><span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+          <div class="card__body">
+            <h3 class="card__title">Implementing AI inside an agency</h3>
+            <p class="card__text">Walkthrough of how the first 3 to 5 agents get wired into a $100k/mo agency, and which wins show up first.</p>
+            <button type="button" class="btn btn--ghost" data-yt-play="h6xU2EFVevE">Access Now
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <button type="button" class="card__media video" data-yt="RvJARGxCOv8" data-yt-start="1076" aria-label="Play playbook"><div class="ph" data-ph="playbook-3" data-bg="../assets/Frame-1484582068-2.avif"></div><span class="play play--round" aria-hidden="true"><svg width="13" height="11" viewBox="0 0 15 13" fill="#fff"><path d="M0 0l15 6.5L0 13z"/></svg></span></button>
+          <div class="card__body">
+            <h3 class="card__title">Where AI actually saves payroll</h3>
+            <p class="card__text">Line-by-line breakdown of the roles that get compressed, the ones that do not, and how to keep the humans you want.</p>
+            <button type="button" class="btn btn--ghost" data-yt-play="RvJARGxCOv8">Access Now
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CAREERS ══════════════════ -->
+  <section class="sec" id="careers">
+    <div class="wrap">
+      <div class="head head--c rv">
+        <span class="eyebrow eyebrow--c">Careers</span>
+        <h2 class="h2">Be part of our mission</h2>
+      </div>
+
+      <div class="jobs rv">
+
+        <article class="job">
+          <div class="job__top">
+            <h3 class="job__title">Sales Closer</h3>
+            <span class="pill"><i style="background:#A610DF"></i>Sales</span>
+          </div>
+          <p>Run application calls with agency owners and match each one to the program that fits their stage.</p>
+          <div class="meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v6l4 2" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>Full-time</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v12M9.5 9.5h5M9.5 14.5h5" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>$70K-$150K OTE</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z" stroke="#AAA5AD" stroke-width="1.7" stroke-linejoin="round"/></svg>Remote</span>
+          </div>
+        
+          <a href="apply.html" class="btn btn--ghost">Apply Now — Sales Closer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </article>
+
+        <article class="job">
+          <div class="job__top">
+            <h3 class="job__title">Setter</h3>
+            <span class="pill"><i style="background:#A610DF"></i>Sales</span>
+          </div>
+          <p>Qualify inbound applicants and book qualified agency owners onto sales calls with our closing team.</p>
+          <div class="meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v6l4 2" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>Full-time</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v12M9.5 9.5h5M9.5 14.5h5" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>$40K-$60K</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z" stroke="#AAA5AD" stroke-width="1.7" stroke-linejoin="round"/></svg>Remote</span>
+          </div>
+        
+          <a href="apply.html" class="btn btn--ghost">Apply Now — Setter
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </article>
+
+        <article class="job">
+          <div class="job__top">
+            <h3 class="job__title">Client Success Manager</h3>
+            <span class="pill"><i style="background:#F7D277"></i>Client success</span>
+          </div>
+          <p>Support agency owners in our private Slack community and keep engagement high across weekly coaching calls.</p>
+          <div class="meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v6l4 2" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>Full-time</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v12M9.5 9.5h5M9.5 14.5h5" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>$60K-$80K</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z" stroke="#AAA5AD" stroke-width="1.7" stroke-linejoin="round"/></svg>Remote</span>
+          </div>
+        
+          <a href="apply.html" class="btn btn--ghost">Apply Now — Client Success Manager
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </article>
+
+        <article class="job">
+          <div class="job__top">
+            <h3 class="job__title">Onboarding Specialist</h3>
+            <span class="pill"><i style="background:#F7D277"></i>Client success</span>
+          </div>
+          <p>Guide new members through their first 30 days and get them to their first system installed fast.</p>
+          <div class="meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v6l4 2" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>Full-time</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v12M9.5 9.5h5M9.5 14.5h5" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>$50K-$65K</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z" stroke="#AAA5AD" stroke-width="1.7" stroke-linejoin="round"/></svg>Remote</span>
+          </div>
+        
+          <a href="apply.html" class="btn btn--ghost">Apply Now — Onboarding Specialist
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </article>
+
+        <article class="job">
+          <div class="job__top">
+            <h3 class="job__title">Video editor</h3>
+            <span class="pill"><i style="background:#77BDF7"></i>Marketing</span>
+          </div>
+          <p>Edit long-form and short-form video for our YouTube channel, the main way new applicants find us.</p>
+          <div class="meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v6l4 2" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>Full-time</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v12M9.5 9.5h5M9.5 14.5h5" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>$45K-$65K</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z" stroke="#AAA5AD" stroke-width="1.7" stroke-linejoin="round"/></svg>Remote</span>
+          </div>
+        
+          <a href="apply.html" class="btn btn--ghost">Apply Now — Video editor
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </article>
+
+        <article class="job">
+          <div class="job__top">
+            <h3 class="job__title">Content strategist</h3>
+            <span class="pill"><i style="background:#77BDF7"></i>Marketing</span>
+          </div>
+          <p>Plan video topics that speak to agency owners at every stage, from brand new to seven figures.</p>
+          <div class="meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v6l4 2" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>Full-time</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#AAA5AD" stroke-width="1.7"/><path d="M12 6v12M9.5 9.5h5M9.5 14.5h5" stroke="#AAA5AD" stroke-width="1.7" stroke-linecap="round"/></svg>$55K-$75K</span>
+            <em aria-hidden="true"></em>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-4z" stroke="#AAA5AD" stroke-width="1.7" stroke-linejoin="round"/></svg>Remote</span>
+          </div>
+        
+          <a href="apply.html" class="btn btn--ghost">Apply Now — Content strategist
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </article>
+
+        <a href="career.html" class="btn btn--outline">
+          See All Careers
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 11 3M11 3H4.6M11 3v6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FAQ ══════════════════ -->
+  <section class="sec">
+    <div class="wrap faq rv">
+      <div>
+        <span class="eyebrow">F.A.Q</span>
+        <h2 class="faq__title">Frequently asked questions.</h2>
+      </div>
+
+      <div class="acc" id="ls-acc">
+
+        <div class="acc__item is-open">
+          <button class="acc__btn" type="button" aria-expanded="true">
+            What&rsquo;s the difference between Launch &amp; Land and License &amp; Scale?
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__panel"><div class="acc__inner"><div>
+            <i aria-hidden="true"></i>
+            <p>Launch &amp; Land covers $0 to $10k a month. License &amp; Scale covers $10k to $250k a month and beyond. One teaches how to drive, the other how to race.</p>
+          </div></div></div>
+        </div>
+
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false">
+            What happens after booking a call?
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__panel"><div class="acc__inner"><div>
+            <i aria-hidden="true"></i>
+            <p>You get a short pre-call form so we understand your numbers before we speak. On the call we map your current constraint and tell you honestly whether we can move it.</p>
+          </div></div></div>
+        </div>
+
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false">
+            Is this just another course that sits unused?
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__panel"><div class="acc__inner"><div>
+            <i aria-hidden="true"></i>
+            <p>No. You get the assets we run in our own agency plus live weekly calls, so the work happens with us instead of alone in a dashboard.</p>
+          </div></div></div>
+        </div>
+
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false">
+            What if the niche is too specific or too different?
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__panel"><div class="acc__inner"><div>
+            <i aria-hidden="true"></i>
+            <p>The offer, acquisition and fulfilment systems are niche-agnostic. We adapt the messaging with you on the calls to fit the market you already serve.</p>
+          </div></div></div>
+        </div>
+
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false">
+            What kind of support actually comes with this?
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__panel"><div class="acc__inner"><div>
+            <i aria-hidden="true"></i>
+            <p>Weekly live calls, a private community of operators at your stage, and direct feedback on your funnels, scripts and hiring as you install each system.</p>
+          </div></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ SURVEY ══════════════════ -->
+  <section class="survey-sec" id="apply">
+    <div class="survey-box">
+      <span class="glow glow--btm" aria-hidden="true" style="width:min(1042px,100%)"></span>
+
+      <div class="survey-hd rv">
+        <span class="eyebrow eyebrow--c">Fill out the survey</span>
+        <h2>Fill Out The Survey Below To See If I Can Help</h2>
+      </div>
+
+      <div class="survey-embed rv" id="ls-survey">
+        <div data-tf-live="01KQJQPYNN9C8G6RHGVZAC29T6" data-tf-inline-on-mobile="true" data-tf-medium="snippet"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__logo"><img src="../assets/ls-logo.png" alt="License &amp; Scale" width="260" height="36"></div>
+
+      <div class="trust" style="justify-content:center">
+        <span class="tp">
+          <svg width="16.75" height="16" viewBox="0 0 24 24" fill="#00B77B" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg>
+          <b style="font-weight:600">Trustpilot</b>
+        </span>
+        <span class="stars" role="img" aria-label="Rated 4.8 out of 5">
+          <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+          <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+          <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+          <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+          <i><svg width="10.8" height="10.3" viewBox="0 0 24 24" fill="#F7EEFF"><path d="M12 2l2.9 6.9L22 9.6l-5.4 4.8L18.2 22 12 18.3 5.8 22l1.6-7.6L2 9.6l7.1-.7z"/></svg></i>
+        </span>
+        <span class="v" style="font-weight:600">4.8</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="v" style="font-weight:600">Excellent</span>
+      </div>
+
+      <small>&copy; 2026 License &amp; Scale. All rights reserved. &middot; <a href="https://licenseandscale.com/ls-privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> &middot; <a href="https://licenseandscale.com/terms" target="_blank" rel="noopener">Terms of Use</a></small>
+    </div>
+  </footer>
+
+  <div class="ls-lightbox" id="ls-lightbox" aria-hidden="true">
+    <button type="button" class="ls-lightbox__close" id="ls-lightbox-close" aria-label="Close image">&times;</button>
+    <img class="ls-lightbox__img" id="ls-lightbox-img" alt="Member message">
+  </div>
+
+</div><!-- /#ls-root -->
+
+<script>
+(function(){
+  var root = document.getElementById('ls-root');
+  if(!root) return;
+
+  /* ── asset base rewrite: data-bg="../assets/x.jpg" -> CDN url ── */
+  var base = (window.LS_ASSET_BASE || '').replace(/\/$/,'');
+  root.querySelectorAll('[data-bg]').forEach(function(el){
+    var src = el.getAttribute('data-bg');
+    if(!src) return;
+    if(base && src.indexOf('assets/') === 0) src = base + '/' + src.slice(7);
+    el.style.setProperty('--img', 'url("' + src + '")');
+    el.classList.add('is-set');
+  });
+  root.querySelectorAll('img[src^="assets/"]').forEach(function(img){
+    if(base) img.setAttribute('src', base + '/' + img.getAttribute('src').slice(7));
+  });
+
+  /* ── mobile menu ── */
+  var burger = root.querySelector('#ls-burger'), menu = root.querySelector('#ls-menu');
+  if(burger && menu){
+    burger.addEventListener('click', function(){
+      var open = menu.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    menu.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ menu.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); }
+    });
+  }
+
+  /* ── smooth in-page anchors ── */
+  root.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id.length < 2) return;
+      var t = document.querySelector(id);
+      if(!t) return;
+      e.preventDefault();
+      t.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  /* ── FAQ accordion ── */
+  root.querySelectorAll('#ls-acc .acc__btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement, open = item.classList.contains('is-open');
+      root.querySelectorAll('#ls-acc .acc__item').forEach(function(i){
+        i.classList.remove('is-open');
+        i.querySelector('.acc__btn').setAttribute('aria-expanded','false');
+      });
+      if(!open){ item.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  /* ── results carousel ── */
+  var rail = root.querySelector('#ls-rail');
+  if(rail){
+    var slides = rail.querySelectorAll('.result'),
+        dots   = root.querySelectorAll('#ls-dots button'),
+        prev   = root.querySelector('#ls-prev'),
+        next   = root.querySelector('#ls-next');
+
+    function step(){ return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : rail.clientWidth; }
+    function index(){ return Math.round(rail.scrollLeft / step()); }
+    function goTo(i){ rail.scrollTo({ left: Math.max(0, Math.min(i, slides.length - 1)) * step(), behavior:'smooth' }); }
+
+    if(prev) prev.addEventListener('click', function(){ goTo(index() - 1); });
+    if(next) next.addEventListener('click', function(){ goTo(index() + 1); });
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); });
+
+    rail.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight'){ e.preventDefault(); goTo(index() + 1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); goTo(index() - 1); }
+    });
+
+    rail.addEventListener('scroll', function(){
+      var i = index(), max = slides.length - 1;
+      dots.forEach(function(d,n){
+        if(n === i) d.setAttribute('aria-current','true'); else d.removeAttribute('aria-current');
+      });
+      if(prev) prev.classList.toggle('is-on', i > 0);
+      if(next) next.classList.toggle('is-on', i < max);
+    }, { passive:true });
+  }
+
+  /* ── inline YouTube (same-tab play) ── */
+  function lsPlayYt(btn){
+    if(!btn || btn.classList.contains('is-playing')) return;
+    var id = btn.getAttribute('data-yt');
+    if(!id) return;
+    var start = btn.getAttribute('data-yt-start');
+    var src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+    if(start) src += '&start=' + encodeURIComponent(start);
+    var iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = btn.getAttribute('aria-label') || 'Case study video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    btn.appendChild(iframe);
+    btn.classList.add('is-playing');
+  }
+  root.querySelectorAll('.video[data-yt]').forEach(function(btn){
+    btn.addEventListener('click', function(){ lsPlayYt(btn); });
+  });
+  root.querySelectorAll('[data-yt-play]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var id = el.getAttribute('data-yt-play');
+      if(!id) return;
+      var btn = root.querySelector('.video[data-yt="' + id + '"]');
+      if(btn){ lsPlayYt(btn); btn.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+    });
+  });
+
+  /* ── member message zoom ── */
+  var lb = root.querySelector('#ls-lightbox');
+  var lbImg = root.querySelector('#ls-lightbox-img');
+  var lbClose = root.querySelector('#ls-lightbox-close');
+  function closeLb(){
+    if(!lb) return;
+    lb.classList.remove('is-open');
+    lb.setAttribute('aria-hidden','true');
+    if(lbImg) lbImg.removeAttribute('src');
+    document.documentElement.style.overflow = '';
+  }
+  function openLb(src){
+    if(!lb || !lbImg || !src) return;
+    if(base && src.indexOf('assets/') === 0) src = base + '/' + src.slice(7);
+    lbImg.src = src;
+    lb.classList.add('is-open');
+    lb.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow = 'hidden';
+  }
+  root.querySelectorAll('.shot[data-zoom]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openLb(btn.getAttribute('data-zoom')); });
+  });
+  if(lbClose) lbClose.addEventListener('click', closeLb);
+  if(lb) lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLb(); });
+
+  /* ── scroll reveal ── */
+  var items = root.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:.08 });
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('is-in'); });
+  }
+})();
+</script>
+<script src="js/ls-enhance.js"></script>
+
+</body>
+</html>
