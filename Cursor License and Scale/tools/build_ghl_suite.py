@@ -270,9 +270,11 @@ body{{margin:0;overflow-x:clip;background:#0B0A12}}
 
 
 def main() -> None:
-    if OUTPUT.exists():
-        shutil.rmtree(OUTPUT)
-    (OUTPUT / "pages").mkdir(parents=True)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    pages_dir = OUTPUT / "pages"
+    if pages_dir.exists():
+        shutil.rmtree(pages_dir)
+    pages_dir.mkdir()
     manifest = {
         "name": "Cursor License and Scale",
         "format": "GoHighLevel hybrid source suite",
