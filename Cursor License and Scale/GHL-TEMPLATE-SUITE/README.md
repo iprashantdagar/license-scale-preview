@@ -51,6 +51,7 @@ GHL account after these page kits are assembled.
 4. Connect the native application form using `GHL-FORM-AND-WORKFLOW.md`.
 5. Convert approved sections using `NATIVE-ASSEMBLY.md`.
 6. Complete `PUBLISH-CHECKLIST.md`.
+7. Create the share link or full Snapshot using `ACCOUNT-FINALIZATION.md`.
 
 `manifest.json` is the machine-readable page, integration, and file inventory.
 Run `../tools/build_ghl_suite.py` to regenerate all page kits from the frozen
