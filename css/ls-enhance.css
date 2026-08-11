@@ -1,0 +1,118 @@
+/* License & Scale — UI enhancements
+   Load LAST (after every other stylesheet on the page).
+   1) Casino / odometer digit reels for the headline stats.
+   2) Mobile navigation that follows the user on every page. */
+
+/* ═══════════════ 1. ODOMETER STATS ═══════════════ */
+/* the reels live inside <b>, where the pages already style bare `span`
+   children of the stat blocks — force the numeral typography back to the <b> */
+#ls-root .ls-odo,
+#ls-root .ls-odo *{
+  font:inherit !important;
+  color:inherit !important;
+  letter-spacing:inherit !important;
+  text-transform:none !important;
+  white-space:nowrap !important;
+}
+#ls-root .ls-odo{
+  display:inline-flex;
+  align-items:flex-start;
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+}
+#ls-root .ls-odo__s{ display:inline-block }
+#ls-root .ls-odo__d{
+  display:inline-block;
+  overflow:hidden;
+  vertical-align:top;
+}
+#ls-root .ls-odo__r{
+  display:block;
+  transform:translate3d(0,0,0);
+  will-change:transform;
+  backface-visibility:hidden;
+}
+#ls-root .ls-odo__r > i{
+  display:block;
+  text-align:center;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-style:normal;
+}
+/* exact value kept for assistive tech while the reels spin */
+#ls-root .ls-odo-sr{
+  position:absolute;
+  width:1px;height:1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+  border:0;
+}
+
+/* ═══════════════ 2. MOBILE STICKY NAV ═══════════════ */
+@media (max-width:991px){
+  #ls-root .nav{
+    position:fixed !important;
+    top:0;
+    left:0;
+    right:0;
+    z-index:120;
+    padding-top:calc(12px + env(safe-area-inset-top,0px)) !important;
+    padding-bottom:12px !important;
+    padding-left:max(16px,env(safe-area-inset-left,0px)) !important;
+    padding-right:max(16px,env(safe-area-inset-right,0px)) !important;
+    background:rgba(11,10,18,.84);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border-bottom:1px solid rgba(29,29,35,.95);
+  }
+  /* page heroes previously stripped the bar back to transparent */
+  #ls-root .page-hero .nav,
+  #ls-root .hero .nav{
+    background:rgba(11,10,18,.84) !important;
+    border-bottom-color:rgba(29,29,35,.95) !important;
+  }
+  /* keeps the hero stacking context above the sections that follow it,
+     so the fixed bar is never painted over */
+  #ls-root .hero,
+  #ls-root .page-hero{ z-index:100 }
+  /* replaces the space the bar used to occupy in flow (height set in JS) */
+  #ls-root .ls-nav-spacer{
+    flex:0 0 auto;
+    width:100%;
+    pointer-events:none;
+  }
+  /* one dropdown treatment for every page (some pages miss ls-mobile.css) */
+  #ls-root .menu{
+    top:calc(56px + env(safe-area-inset-top,0px)) !important;
+    gap:4px !important;
+    padding:10px !important;
+    border-radius:14px !important;
+    background:#12111c !important;
+    box-shadow:0 28px 60px rgba(0,0,0,.5);
+    max-height:calc(100dvh - var(--ls-navh,72px) - 24px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+  #ls-root .menu a{
+    width:100%;
+    padding:14px !important;
+    border-radius:10px;
+    font-size:15px !important;
+    line-height:1.2 !important;
+    font-weight:500;
+  }
+  html{ scroll-padding-top:calc(var(--ls-navh,72px) + 8px) }
+}
+
+@media (max-width:991px) and (prefers-reduced-motion:reduce){
+  #ls-root .nav{
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+    background:rgba(11,10,18,.98);
+  }
+  #ls-root .page-hero .nav,
+  #ls-root .hero .nav{ background:rgba(11,10,18,.98) !important }
+}
